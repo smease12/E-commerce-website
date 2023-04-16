@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "b8cxIAetyywDSwBfVd4A2TQk457u3WLDGIbMWvfN9w8=",
+  "Hash": "ollhbqL1fVYy6whmnY0F1jLXAlfFnyOZtYfpKr0niD4=",
   "Source": "E-commerce website",
   "BasePath": "_content/E-commerce website",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\E-commerce website.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\cart.png",
+      "SourceId": "E-commerce website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\",
+      "BasePath": "_content/E-commerce website",
+      "RelativePath": "cart.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\cart.png"
     },
     {
       "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\css\\nav.css",
@@ -1086,6 +1103,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\logo.png",
+      "SourceId": "E-commerce website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\",
+      "BasePath": "_content/E-commerce website",
+      "RelativePath": "logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\user.png",
+      "SourceId": "E-commerce website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\",
+      "BasePath": "_content/E-commerce website",
+      "RelativePath": "user.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\user.png"
     }
   ]
 }
