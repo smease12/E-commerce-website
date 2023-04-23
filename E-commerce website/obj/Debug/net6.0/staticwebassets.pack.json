@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\E-commerce website.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\banner.png",
+      "PackagePath": "staticwebassets\\banner.png"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\cart.png",
       "PackagePath": "staticwebassets\\cart.png"
     },
