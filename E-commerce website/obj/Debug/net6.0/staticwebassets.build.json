@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5Hm3LbxrQphW8AX4HWsLgiGjbst9laV7ZWxRRDFMDg8=",
+  "Hash": "x49EFNs4Qitk8iLW6ChjBe0Ldx72ArlRG3fBiomSjBU=",
   "Source": "E-commerce website",
   "BasePath": "_content/E-commerce website",
   "Mode": "Default",
@@ -168,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\chair.png"
+    },
+    {
+      "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\css\\footer.css",
+      "SourceId": "E-commerce website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\",
+      "BasePath": "_content/E-commerce website",
+      "RelativePath": "css/footer.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\footer.css"
     },
     {
       "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\css\\home.css",
@@ -1358,6 +1375,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\logo-light.png",
+      "SourceId": "E-commerce website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\",
+      "BasePath": "_content/E-commerce website",
+      "RelativePath": "logo-light.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo-light.png"
     },
     {
       "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\necklace.jpg",
