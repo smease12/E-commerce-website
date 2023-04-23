@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\cart.png"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\css\\nav.css",
       "PackagePath": "staticwebassets\\css\\nav.css"
     },
