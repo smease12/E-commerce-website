@@ -5,12 +5,32 @@
       "PackagePath": "staticwebassets\\E-commerce website.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\Jewelry.png",
+      "PackagePath": "staticwebassets\\Jewelry.png"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\arrow.png",
+      "PackagePath": "staticwebassets\\arrow.png"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\banner.png",
       "PackagePath": "staticwebassets\\banner.png"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\candle 2.jpg",
+      "PackagePath": "staticwebassets\\candle 2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\candle.png",
+      "PackagePath": "staticwebassets\\candle.png"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\cart.png",
       "PackagePath": "staticwebassets\\cart.png"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\chair.png",
+      "PackagePath": "staticwebassets\\chair.png"
     },
     {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\css\\home.css",
@@ -25,8 +45,24 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\earrings.png",
+      "PackagePath": "staticwebassets\\earrings.png"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\furniture.png",
+      "PackagePath": "staticwebassets\\furniture.png"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\gift wrapping.png",
+      "PackagePath": "staticwebassets\\gift wrapping.png"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\js\\home.js",
+      "PackagePath": "staticwebassets\\js\\home.js"
     },
     {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\js\\site.js",
@@ -263,6 +299,10 @@
     {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\logo.png",
       "PackagePath": "staticwebassets\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\necklace.jpg",
+      "PackagePath": "staticwebassets\\necklace.jpg"
     },
     {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\user.png",
