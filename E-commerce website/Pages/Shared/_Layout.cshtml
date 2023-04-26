@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] Smease12 Gifts</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-   @* <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />*@
+   <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/nav.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/E_commerce_website.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/footer.css" asp-append-version="true" />
+    @await RenderSectionAsync("Styles", required: false)
+   @* <link rel="stylesheet" href="~/E_commerce_website.styles.css" asp-append-version="true" />*@
 </head>
 <body>
     <header>
@@ -23,24 +25,63 @@
                     <a href="#"><img src="cart.png" alt=""></a>
                 </div>
             </div>
-           @* <ul class="links-container">
-                <li class="link-item"><Ca href="#" class="link">Candles</a></li>
+            <ul class="links-container">
+                <li class="link-item"><a href="#" class="link">Candles</a></li>
                 <li class="link-item"><a href="#" class="link">Jewelry</a></li>
                 <li class="link-item"><a href="#" class="link">Furniture</a></li>
-            </ul>*@
+            </ul>
         </nav>
 
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+   @* <div class="container">*@
+        @*<main role="main" class="pb-3">*@
             @RenderBody()
-        </main>
-    </div>
+       @* </main>*@
+    @*</div>*@
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - E_commerce_website - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <footer>
+        <div class="footer-content">
+            <img src="logo.png" class="logo" alt="">
+            <div class="footer-ul-container">
+                <ul class="category">
+                    <li class="category-title">Candles</li>
+                    <li><a href="#" class="footer-link">Soy</a></li>
+                    <li><a href="#" class="footer-link">Beeswax</a></li>
+                    <li><a href="#" class="footer-link">Scented</a></li>
+                    <li><a href="#" class="footer-link">Unscented</a></li>
+                </ul>
+                <ul class="category">
+                    <li class="category-title">Jewelry</li>
+                    <li><a href="#" class="footer-link">Earrings</a></li>
+                    <li><a href="#" class="footer-link">Necklaces</a></li>
+                    <li><a href="#" class="footer-link">Rings</a></li>
+                    <li><a href="#" class="footer-link">Bracelets</a></li>
+                </ul>
+                <ul class="category">
+                    <li class="category-title">Furniture</li>
+                    <li><a href="#" class="footer-link">Chairs</a></li>
+                    <li><a href="#" class="footer-link">Sofas</a></li>
+                    <li><a href="#" class="footer-link">Bookshelves</a></li>
+                    <li><a href="#" class="footer-link">Desks</a></li>
+                </ul>
+            </div>
         </div>
+        <p class="footer-title">about company</p>
+        <p class="info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat tempore ad suscipit, eos eius quisquam sed optio nisi quaerat fugiat ratione et vero maxime praesentium, architecto minima reiciendis iste quo deserunt assumenda alias ducimus. Ullam odit maxime id voluptates rerum tenetur corporis laboriosam! Cum error ipsum laborum tempore in rerum necessitatibus nostrum nobis modi! Debitis adipisci illum nemo aperiam sed, et accusamus ut officiis. Laborum illo exercitationem quo culpa reprehenderit excepturi distinctio tempore cupiditate praesentium nisi ut iusto, assumenda perferendis facilis voluptas autem fuga sunt ab debitis voluptatum harum eum. Asperiores, natus! Est deserunt incidunt quasi placeat omnis, itaque harum?</p>
+        <p class="info">support emails - help@clothing.com, customersupport@clothing.com</p>
+        <p class="info">telephone - 555-555-5555, 555-555-5555</p>
+        <div class="footer-social-container">
+            <div>
+                <a href="#" class="social-link">terms & services</a>
+                <a href="#" class="social-link">privacy page</a>
+            </div>
+            <div>
+                <a href="#" class="social-link">instagram</a>
+                <a href="#" class="social-link">facebook</a>
+                <a href="#" class="social-link">twitter</a>
+            </div>
+        </div>
+        <p class="footer-credit">Best gifts online store</p>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
