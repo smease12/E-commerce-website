@@ -1,0 +1,113 @@
+﻿@page
+@model E_commerce_website.Pages.searchModel
+@{
+}
+
+@section Styles {
+    <link href="@Url.Content("~/css/search.css")" rel="stylesheet" type="text/css" />
+}
+
+<section class="search-results">
+    <h2 class="heading">search results for <span>product</span></h2>
+
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="candle.png" class="product-thumb" alt="">
+                <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Candles</h2>
+                <p class="product-short-des">candles</p>
+                <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="candle 2.jpg" class="product-thumb" alt="">
+                <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Soy Candles</h2>
+                <p class="product-short-des">organic candles</p>
+                <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="chair.png" class="product-thumb" alt="">
+                <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Office Chairs</h2>
+                <p class="product-short-des">chairs</p>
+                <span class="price">$20</span><span class="actual-price">$200</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="earrings.png" class="product-thumb" alt="">
+                <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Earrings</h2>
+                <p class="product-short-des">earrings</p>
+                <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="furniture.png" class="product-thumb" alt="">
+                <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Furniture</h2>
+                <p class="product-short-des">furniture</p>
+                <span class="price">$20</span><span class="actual-price">$400</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <@*span class="discount-tag">50% off</span>*@
+                <img src="gift wrapping.png" class="product-thumb" alt="">
+                <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Gift Wrapping</h2>
+                <p class="product-short-des">free gift wrapping</p>
+                @*                <span class="price">$20</span><span class="actual-price">$40</span>*@
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="jewelry.png" class="product-thumb" alt="">
+                <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Jewelry</h2>
+                <p class="product-short-des">jewelry sale</p>
+                <span class="price">$20</span><span class="actual-price">$200</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="necklace.jpg" class="product-thumb" alt="">
+                <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">Necklaces</h2>
+                <p class="product-short-des">necklaces on sale</p>
+                <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
