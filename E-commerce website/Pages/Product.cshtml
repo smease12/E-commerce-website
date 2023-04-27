@@ -10,10 +10,46 @@
 <section class="product-details">
     <div class="image-slider">
         <div class="product-images">
-            <img src="img/product image 1.png" class="active" alt="">
-            <img src="img/product image 2.png" alt="">
-            <img src="img/product image 3.png" alt="">
-            <img src="img/product image 4.png" alt="">
+            <img src="candles.jpg" class="active" alt="">
+            <img src="candle 1.png"  alt="">
+            <img src="candle 2.png" alt="">
+            <img src="candle 3.png" alt="">
+            @*<img src="candle 4.png" alt="">*@
         </div>
     </div>
+    <div class="details">
+        <h2 class="product-brand">scented candles</h2>
+        <p class="product-short-des">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <span class="product-price">$20</span>
+        <span class="product-actual-price">$40</span>
+        <span class="product-discount">( 50% off )</span>
+
+        <p class="product-sub-heading">select scent</p>
+
+        <input type="radio" name="scent" value="christmas" checked hidden id="christmas-scent">
+        <label for="christmas-scent" class="scent-radio-btn check">christmas</label>
+        <input type="radio" name="scent" value="toffee" hidden id="toffee-scent">
+        <label for="toffee-scent" class="scent-radio-btn">toffee</label>
+        <input type="radio" name="scent" value="linen" hidden id="linen-scent">
+        <label for="linen-scent" class="scent-radio-btn">linen</label>
+        <input type="radio" name="scent" value="rose" hidden id="rose-scent">
+        <label for="rose-scent" class="scent-radio-btn">rose</label>
+        @*<input type="radio" name="scent" value="lavender" hidden id="lavender-scent">
+        <label for="lavender-scent" class="scent-radio-btn">lavender</label>*@
+
+        <button class="btn cart-btn">add to cart</button>
+        <button class="btn">add to wishlist</button>
+    </div>
 </section>
+
+<section class="detail-des">
+    <h2 class="heading">description</h2>
+    <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ......</p>
+</section>
+
+@section Scripts
+    {
+    <script src="js/product.js"></script>
+}
+
+
