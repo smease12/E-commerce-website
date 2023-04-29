@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "l10cnyKY8QjgSWBxk1XQ8WYmAS/PtT0G8yoW1qpWrw8=",
+  "Hash": "hWjjsA/IXzCb8CDAaTGejtvtIkG+w/6Z9GNI0Xk9Pb8=",
   "Source": "E-commerce website",
   "BasePath": "_content/E-commerce website",
   "Mode": "Default",
@@ -425,6 +425,23 @@
       "OriginalItemSpec": "wwwroot\\earrings.png"
     },
     {
+      "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\error.png",
+      "SourceId": "E-commerce website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\",
+      "BasePath": "_content/E-commerce website",
+      "RelativePath": "error.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\error.png"
+    },
+    {
       "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\favicon.ico",
       "SourceId": "E-commerce website",
       "SourceType": "Discovered",
@@ -508,6 +525,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Jewelry.png"
+    },
+    {
+      "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\js\\form.js",
+      "SourceId": "E-commerce website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\",
+      "BasePath": "_content/E-commerce website",
+      "RelativePath": "js/form.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\form.js"
     },
     {
       "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\js\\home.js",
