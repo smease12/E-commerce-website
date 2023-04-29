@@ -22,10 +22,10 @@ namespace E_commerce_website.Pages
         [StringLength(60, MinimumLength = 10)]
         public string Number { get; set; }
         [BindProperty]
-        [Required]
-        public Boolean TermsAndCond {get; set;}
+        [CheckBoxRequired(ErrorMessage = "You must agree to our terms and conditions")]
+        public bool TermsAndCond {get; set;}
         [BindProperty]
-        public Boolean Notification { get; set; }
+        public bool Notification { get; set; }
         public void OnGet()
         {
         }

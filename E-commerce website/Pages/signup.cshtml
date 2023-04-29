@@ -27,7 +27,8 @@
             <span asp-validation-for="Password" class="text-danger"></span>
             <input type="text" autocomplete="off" id="Number" name="Number" placeholder="number">
             <span asp-validation-for="Number" class="text-danger"></span>
-            <input type="checkbox" checked class="checkbox" name="TermsAndCond" id="TermsAndCond">
+            <input type="checkbox" checked class="checkbox" name="TermsAndCond" id="TermsAndCond" value="true">
+            <input type="hidden" name="TermsAndCond" value="false" />
             <label for="TermsAndCond">agree to our <a href="">terms and conditions</a></label>
             <span asp-validation-for="TermsAndCond" class="text-danger"></span>
             <br>
