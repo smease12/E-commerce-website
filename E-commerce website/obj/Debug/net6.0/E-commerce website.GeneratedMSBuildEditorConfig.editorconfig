@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Serena\source\repos\E-commerce-website\E-commerce website
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Serena/source/repos/E-commerce-website/E-commerce website/Pages/404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcNDA0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Serena/source/repos/E-commerce-website/E-commerce website/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,8 +36,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Serena/source/repos/E-commerce-website/E-commerce website/Pages/search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcc2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Serena/source/repos/E-commerce-website/E-commerce website/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Serena/source/repos/E-commerce-website/E-commerce website/Pages/signup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcc2lnbnVwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Serena/source/repos/E-commerce-website/E-commerce website/Pages/_ViewImports.cshtml]
