@@ -97,6 +97,10 @@
       "PackagePath": "staticwebassets\\earrings.png"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\error.png",
+      "PackagePath": "staticwebassets\\error.png"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -111,6 +115,10 @@
     {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\gift wrapping.png",
       "PackagePath": "staticwebassets\\gift wrapping.png"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\js\\form.js",
+      "PackagePath": "staticwebassets\\js\\form.js"
     },
     {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\js\\home.js",
