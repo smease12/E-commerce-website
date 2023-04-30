@@ -8,6 +8,7 @@ namespace E_commerce_website.Models
 {
     public class User
     {
+        [Key]
         public int Id { get; set; }
         [StringLength(60, MinimumLength = 3, ErrorMessage = "Name must be 3 letters long and no more than 60")]
         [Required(ErrorMessage = "Enter your name")]
