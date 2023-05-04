@@ -22,8 +22,8 @@
             <span asp-validation-for="User.Name" class="text-danger"></span>
             <input type="text" autocomplete="off" id="Name" name="User.Name" placeholder="name">
 
-            <span asp-validation-for="User.Email" class="text-danger"></span>
-            <input type="email" autocomplete="off" id="Email" name="User.Email" placeholder="email">
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <input type="email" autocomplete="off" asp-for="Email" id="Email" name="Email" data-val-remote-additionalfields="__RequestVerificationToken" placeholder="email">
 
             <span asp-validation-for="User.Password" class="text-danger"></span>
             <input type="password" autocomplete="off" id="Password" name="User.Password" placeholder="password">
@@ -49,6 +49,10 @@
         <p class="alert-msg">Error message</p>
     </div>
 </body>
-@*<script src="js/form.js"></script>*@
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/lib/jquery-ajax-unobtrusive/dist/jquery.unobtrusive-ajax.min.js"></script>
+
 </html>
 
