@@ -13,7 +13,7 @@ namespace E_commerce_website.Models
         [StringLength(60, MinimumLength = 3, ErrorMessage = "Name must be 3 letters long and no more than 60")]
         [Required(ErrorMessage = "Enter your name")]
         public string Name { get; set; }
-        [Required(ErrorMessage = "Enter your name")]
+
         public string Email { get; set; }
         [StringLength(60, MinimumLength = 8, ErrorMessage = "Password must be 8 letters long and no more than 60")]
         [Required(ErrorMessage = "Enter your password")]
