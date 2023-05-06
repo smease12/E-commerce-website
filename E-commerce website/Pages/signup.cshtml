@@ -23,7 +23,8 @@
             <input type="text" autocomplete="off" id="Name" name="User.Name" placeholder="name">
 
             <span asp-validation-for="Email" class="text-danger"></span>
-            <input type="email" autocomplete="off" asp-for="Email" id="Email" name="Email" data-val-remote-additionalfields="__RequestVerificationToken" placeholder="email">
+            @*data-val-remote-additionalfields="__RequestVerificationToken"*@
+            <input type="email" autocomplete="off" asp-for="Email" id="Email" data-val-remote-additionalfields="__RequestVerificationToken" name="Email" placeholder="email">
 
             <span asp-validation-for="User.Password" class="text-danger"></span>
             <input type="password" autocomplete="off" id="Password" name="User.Password" placeholder="password">

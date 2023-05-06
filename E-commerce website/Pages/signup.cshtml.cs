@@ -14,7 +14,7 @@ namespace E_commerce_website.Pages
 
         [PageRemote(
             ErrorMessage = "Email Address already exists",
-           // AdditionalFields = "__RequestVerificationToken",
+            //AdditionalFields = "__RequestVerificationToken",
             HttpMethod = "post",
             PageHandler = "CheckEmail"
         )]
@@ -33,18 +33,23 @@ namespace E_commerce_website.Pages
         {
             var emptyUser = new User();
 
-            if (await TryUpdateModelAsync<User>(
-                emptyUser,
-                "user",   // Prefix for form value. u => Email,
-                 u => u.Name, u => u.Password, u => u.Number, u => u.TermsAndCond,
-                 u => u.Notification))
-            {
-                emptyUser.CreatedDate = DateTime.UtcNow;
-                emptyUser.LastUpdatedDate = DateTime.UtcNow;
-                _context.Users.Add(emptyUser);
-                await _context.SaveChangesAsync();
-                return Redirect("~/");
-            }
+            //if (await TryUpdateModelAsync<User>(
+            //    emptyUser,
+            //    "user",   // Prefix for form value. u => Email,
+            //     u => u.Name, u => u.Password, u => u.Number, u => u.TermsAndCond,
+            //     u => u.Notification))
+            emptyUser.Name = User.Name;
+            emptyUser.Password = User.Password;
+            emptyUser.Number = User.Number;
+            emptyUser.TermsAndCond = User.TermsAndCond;
+            emptyUser.Notification = User.Notification;
+            emptyUser.Email = Email;
+            emptyUser.CreatedDate = DateTime.UtcNow;
+            emptyUser.LastUpdatedDate = DateTime.UtcNow;
+            _context.Users.Add(emptyUser);
+            await _context.SaveChangesAsync();
+            //return Redirect("~/");
+
 
             return Page();
         }
