@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace E_commerce_website
 {
-    public class ECommerceDBContext : IdentityDbContext<IdentityUser>
+    public class ECommerceDBContext : IdentityDbContext<ApplicationUser>
     {
         public ECommerceDBContext(DbContextOptions<ECommerceDBContext> options)
              : base(options)
