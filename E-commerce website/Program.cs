@@ -1,5 +1,6 @@
 using E_commerce_website;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,9 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<ECommerceDBContext>(options =>
   options.UseSqlServer(builder.Configuration.GetConnectionString("ECommerceContext")));
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<ECommerceDBContext>();
 
 var app = builder.Build();
 
@@ -25,6 +29,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();;
 
 app.UseAuthorization();
 

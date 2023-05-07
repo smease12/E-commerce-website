@@ -20,17 +20,16 @@
         <form method ="post" style="margin: 0 auto; width: 300px;">
             @*added style 4/29/23*@
             <span asp-validation-for="User.Name" class="text-danger"></span>
-            <input type="text" autocomplete="off" id="Name" name="User.Name" placeholder="name">
+            <input type="text" asp-for="User.Name" autocomplete="off" id="Name" name="User.Name" placeholder="name">
 
             <span asp-validation-for="Email" class="text-danger"></span>
-            @*data-val-remote-additionalfields="__RequestVerificationToken"*@
             <input type="email" autocomplete="off" asp-for="Email" id="Email" data-val-remote-additionalfields="__RequestVerificationToken" name="Email" placeholder="email">
 
             <span asp-validation-for="User.Password" class="text-danger"></span>
-            <input type="password" autocomplete="off" id="Password" name="User.Password" placeholder="password">
+            <input type="password" asp-for="User.Password" autocomplete="off" id="Password" name="User.Password" placeholder="password">
 
             <span asp-validation-for="User.Number" class="text-danger"></span>
-            <input type="text" autocomplete="off" id="Number" name="User.Number" placeholder="number">          
+            <input type="text" asp-for="User.Number" autocomplete="off" id="Number" name="User.Number" placeholder="number">          
             
             <input type="checkbox" checked class="checkbox" name="User.TermsAndCond" id="TermsAndCond" value="true">
             <input type="hidden" name="User.TermsAndCond" value="false" />
