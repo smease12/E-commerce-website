@@ -19,26 +19,27 @@
         <img src="logo.png" class="logo" alt="">
         <form method ="post" style="margin: 0 auto; width: 300px;">
             @*added style 4/29/23*@
-            <span asp-validation-for="User.Name" class="text-danger"></span>
-            <input type="text" autocomplete="off" id="Name" name="User.Name" placeholder="name">
+            <span asp-validation-for="Input.Username" class="text-danger"></span>
+            <input type="text" asp-for="Input.Username" autocomplete="off" id="Name" name="Input.UserName" placeholder="name">
 
-            <span asp-validation-for="Email" class="text-danger"></span>
-            <input type="email" autocomplete="off" asp-for="Email" id="Email" name="Email" data-val-remote-additionalfields="__RequestVerificationToken" placeholder="email">
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+            <input type="email" autocomplete="off" asp-for="Input.Email" id="Email" name="Input.Email" placeholder="email">
+            @*data-val-remote-additionalfields="__RequestVerificationToken"*@
 
-            <span asp-validation-for="User.Password" class="text-danger"></span>
-            <input type="password" autocomplete="off" id="Password" name="User.Password" placeholder="password">
+            <span asp-validation-for="Input.Password" class="text-danger"></span>
+            <input type="password" asp-for="Input.Password" autocomplete="off" id="Password" name="Input.Password" placeholder="password">
 
-            <span asp-validation-for="User.Number" class="text-danger"></span>
-            <input type="text" autocomplete="off" id="Number" name="User.Number" placeholder="number">          
+            <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            <input type="text" asp-for="Input.PhoneNumber" autocomplete="off" id="Number" name="Input.Number" placeholder="number">          
             
-            <input type="checkbox" checked class="checkbox" name="User.TermsAndCond" id="TermsAndCond" value="true">
-            <input type="hidden" name="User.TermsAndCond" value="false" />
-            <label for="User.TermsAndCond">agree to our <a href="">terms and conditions</a></label>
-            <span asp-validation-for="User.TermsAndCond" class="text-danger"></span>
+            <input type="checkbox" checked class="checkbox" name="Input.TermsAndCond" id="TermsAndCond" value="true">
+            <input type="hidden" name="Input.TermsAndCond" value="false" />
+            <label for="Input.TermsAndCond">agree to our <a href="">terms and conditions</a></label>
+           @* <span asp-validation-for="Input.TermsAndCond" class="text-danger"></span>*@
             
             <br>
-            <input type="checkbox" class="checkbox" id="Notification" name="User.Notification">
-            <label for="User.Notification"><a href="">recieve upcoming offers and events mails</a></label>
+            <input type="checkbox" class="checkbox" id="Notification" name="Input.Notification">
+            <label for="Input.Notification"><a href="">recieve upcoming offers and events mails</a></label>
             <button class="submit-btn">create account</button>
         </form>
         <a href="/login" class="link">already have an account? Log in here</a>
