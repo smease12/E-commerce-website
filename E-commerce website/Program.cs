@@ -14,7 +14,7 @@ builder.Services.AddDbContext<ECommerceDBContext>(options =>
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ECommerceDBContext>();
 
-var app = builder.Build();
+var app = builder.Build(); //test
 
 app.UseStatusCodePagesWithReExecute("/404");
 

@@ -1,6 +1,5 @@
 #nullable disable
 
-
 using E_commerce_website.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Runtime.Serialization.Json;
@@ -49,16 +48,17 @@ namespace E_commerce_website.Pages
         public class InputModel
         {
             [Required]
+            [StringLength(60, MinimumLength = 3, ErrorMessage = "Name must be 3 letters long and no more than 60")]
             [Display(Name = "Name")]
             public string Username { get; set; }
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required]
-            [EmailAddress]
-            [Display(Name = "Email")]
-            public string Email { get; set; }
+            //[Required]
+            //[EmailAddress]
+            //[Display(Name = "Email")]
+            //public string Email { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -66,7 +66,7 @@ namespace E_commerce_website.Pages
             /// </summary>
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
-            [DataType(DataType.Password)]
+           // [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }
 
@@ -81,15 +81,18 @@ namespace E_commerce_website.Pages
 
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 10)]
-            [DataType(DataType.PhoneNumber)]
-            [Display(Name = "PhoneNumber")]
+           // [DataType(DataType.PhoneNumber)]
+            [Display(Name = "Phone Number")]
             public string PhoneNumber { get; set; }
+           // [CheckBoxRequired(ErrorMessage = "You must agree to our terms and conditions")]
+            public bool TermsAndCond { get; set; }
+            public bool Notification { get; set;}
             
         }
 
         [PageRemote(
             ErrorMessage = "Email Address already exists",
-            //AdditionalFields = "__RequestVerificationToken",
+            AdditionalFields = "__RequestVerificationToken",
             HttpMethod = "post",
             PageHandler = "CheckEmail"
         )]
@@ -103,12 +106,17 @@ namespace E_commerce_website.Pages
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
-         //   if (ModelState.IsValid)
-        //    {
-                var user = CreateUser();
-
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
-                await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+            //   if (ModelState.IsValid)
+            //    {
+            //   var user = CreateUser();
+            var user = new ApplicationUser { UserName = Input.Username,
+                PhoneNumber = Input.PhoneNumber,
+            CreatedDate = DateTime.Now,
+           LastUpdatedDate = DateTime.Now,
+            Notification = Input.Notification,
+            TermsAndCond = Input.TermsAndCond};
+                await _userStore.SetUserNameAsync(user, Email, CancellationToken.None);
+                await _emailStore.SetEmailAsync(user, Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
@@ -127,28 +135,6 @@ namespace E_commerce_website.Pages
             // If we got this far, something failed, redisplay form
             return Page();
 
-
-            //var emptyUser = new User();
-
-            //if (await TryUpdateModelAsync<User>(
-            //    emptyUser,
-            //    "user",   // Prefix for form value. u => Email,
-            //     u => u.Name, u => u.Password, u => u.Number, u => u.TermsAndCond,
-            //     u => u.Notification))
-            //emptyUser.Name = User.Name;
-            //emptyUser.Password = User.Password;
-            //emptyUser.Number = User.Number;
-            //emptyUser.TermsAndCond = User.TermsAndCond;
-            //emptyUser.Notification = User.Notification;
-            //emptyUser.Email = Email;
-            //emptyUser.CreatedDate = DateTime.UtcNow;
-            //emptyUser.LastUpdatedDate = DateTime.UtcNow;
-            //_context.Users.Add(emptyUser);
-            //await _context.SaveChangesAsync();
-            //return Redirect("~/");
-
-
-          //  return Page();
         }
 
         // https://learn.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-7.
