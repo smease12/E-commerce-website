@@ -11,6 +11,6 @@ namespace E_commerce_website
              : base(options)
         {
         }
-        public DbSet<User> Users { get; set; }
+
     }
 }
