@@ -11,7 +11,9 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<ECommerceDBContext>(options =>
   options.UseSqlServer(builder.Configuration.GetConnectionString("ECommerceContext")));
 
-builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services
+    .AddDefaultIdentity<ApplicationUser>
+    (options => options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<ECommerceDBContext>();
 
 var app = builder.Build(); //test

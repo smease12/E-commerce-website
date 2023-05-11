@@ -115,7 +115,7 @@ namespace E_commerce_website.Pages
            LastUpdatedDate = DateTime.Now,
             Notification = Input.Notification,
             TermsAndCond = Input.TermsAndCond};
-                await _userStore.SetUserNameAsync(user, Email, CancellationToken.None);
+                await _userStore.SetUserNameAsync(user, Input.Username, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
 

@@ -14,3 +14,10 @@ productContainers.forEach((item, i) => {
         item.scrollLeft -= containerWidth;
     })
 })
+
+
+// When the user clicks on div, open the popup
+function openPopup() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
