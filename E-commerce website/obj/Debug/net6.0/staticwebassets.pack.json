@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\banner.png"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\camera.png",
+      "PackagePath": "staticwebassets\\camera.png"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\candle 1.png",
       "PackagePath": "staticwebassets\\candle 1.png"
     },
@@ -59,6 +63,10 @@
     {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\css\\404.css",
       "PackagePath": "staticwebassets\\css\\404.css"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\css\\addproduct.css",
+      "PackagePath": "staticwebassets\\css\\addproduct.css"
     },
     {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\css\\footer.css",
