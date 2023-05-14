@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <div class="navbar">
             <div class="nav">
                 <a href="/"> <img src="/logo.png" class="brand-logo" alt=""> </a>
                 <div class="nav-items">
@@ -21,29 +21,33 @@
                         <input type="text" class="search-box" placeholder="search product">
                         <button class="search-btn">search</button>
                     </div>
-                    <a class="popup" onclick="openPopup()">
+                    <div class="popup" onclick="openPopup()" style="margin-left: 20px;">
                         <span class="popuptext" id="myPopup">
                             @if (User.Identity.IsAuthenticated)
                             {
-                               @: You are logged in as @User.Identity.Name 
+                                @: You are logged in as @User.Identity.Name
                             }
                             else
                             {
-                               @: Sign in
+                                @: <a href="/Login">Sign in</a>
                             }
                         </span>
-                        <img src="/user.png" alt="">
-                    </a>
-                    <a href="#"><img src="/cart.png" alt=""></a>
+                        <img src="/user.png" style="width: 30px;" alt="">
+                    </div>
+                    <div class="popup" onclick="openPopup2()" style="margin-left: 20px;">                       
+                        <span class="popuptext" id="myPopup2">
+                            View cart
+                        </span>
+                        <img src="/cart.png" alt="" style="width: 30px;">
+                    </div>
                 </div>
+                <ul class="links-container">
+                    <li class="link-item"><a href="#" class="link">Candles</a></li>
+                    <li class="link-item"><a href="#" class="link">Jewelry</a></li>
+                    <li class="link-item"><a href="#" class="link">Furniture</a></li>
+                </ul>
             </div>
-            <ul class="links-container">
-                <li class="link-item"><a href="#" class="link">Candles</a></li>
-                <li class="link-item"><a href="#" class="link">Jewelry</a></li>
-                <li class="link-item"><a href="#" class="link">Furniture</a></li>
-            </ul>
-        </nav>
-
+        </div>
     </header>
     @* <div class="container">*@
     @*<main role="main" class="pb-3">*@
