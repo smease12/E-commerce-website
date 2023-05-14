@@ -25,7 +25,8 @@
                         <span class="popuptext" id="myPopup">
                             @if (User.Identity.IsAuthenticated)
                             {
-                                @: You are logged in as @User.Identity.Name
+                                @: You are logged in as @User.Identity.Name <br/>
+                                 <a href="/Logout">Log out </a>
                             }
                             else
                             {

@@ -8,13 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-builder.Services.AddDbContext<ECommerceDBContext>(options =>
-  options.UseSqlServer(builder.Configuration.GetConnectionString("ECommerceContext")));
-
-builder.Services
-    .AddDefaultIdentity<ApplicationUser>
+builder.Services.AddDefaultIdentity<ApplicationUser>
     (options => options.SignIn.RequireConfirmedAccount = false)
     .AddEntityFrameworkStores<ECommerceDBContext>();
+
+
+builder.Services.AddDbContext<ECommerceDBContext>(options =>
+  options.UseSqlServer(builder.Configuration.GetConnectionString("ECommerceContext")));
 
 var app = builder.Build(); //test
 
