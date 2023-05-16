@@ -12,5 +12,7 @@ namespace E_commerce_website
         {
         }
 
+        public virtual DbSet<Product> Products { get; set; }
+
     }
 }

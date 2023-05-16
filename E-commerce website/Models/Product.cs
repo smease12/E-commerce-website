@@ -7,8 +7,9 @@ namespace E_commerce_website.Models
         [Key]
         public int id { get; set; }
         [Required]
-        public string name { get; set; }    
-        public string description { get; set; }
+        public string name { get; set; } 
+        public string descriptionShort { get; set; }
+        public string descriptionLong { get; set; }
         public string imgLocation1 { get; set; }
         public string imgLocation2 { get; set;}
         public string imgLocation3 { get; set;} 

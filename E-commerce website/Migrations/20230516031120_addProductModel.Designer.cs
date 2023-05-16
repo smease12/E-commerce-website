@@ -4,6 +4,7 @@ using E_commerce_website;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace E_commerce_website.Migrations
 {
     [DbContext(typeof(ECommerceDBContext))]
-    partial class ECommerceDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230516031120_addProductModel")]
+    partial class addProductModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -107,11 +110,7 @@ namespace E_commerce_website.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<string>("descriptionLong")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("descriptionShort")
+                    b.Property<string>("description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
