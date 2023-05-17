@@ -108,33 +108,27 @@ namespace E_commerce_website.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
                     b.Property<string>("descriptionLong")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("descriptionShort")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("discount")
+                    b.Property<decimal?>("discount")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<decimal>("fullPrice")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("imgLocation1")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("imgLocation2")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("imgLocation3")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("imgLocation4")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("name")
@@ -145,7 +139,6 @@ namespace E_commerce_website.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("tags")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
