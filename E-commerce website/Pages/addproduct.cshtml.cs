@@ -27,17 +27,23 @@ namespace E_commerce_website.Pages
             var test = await TryUpdateModelAsync<Product>(
                 emptyProduct,
                 "product",   // Prefix for form value.
-                p => p.name, p => p.fullPrice, p => p.stock);
+                p => p.name, p => p.descriptionShort, p => p.descriptionLong,
+                p => p.imgLocation1, p => p.imgLocation2, p => p.imgLocation3,
+                p => p.imgLocation4, p => p.fullPrice, p => p.discount, p => p.stock,
+                p => p.tags);
             var modelState = ModelState.Values;
 
             if (await TryUpdateModelAsync<Product>(
                 emptyProduct,
                 "product",   // Prefix for form value.
-                p => p.name, p=> p.fullPrice, p=> p.stock))
+                p => p.name, p=> p.descriptionShort, p => p.descriptionLong,
+                p => p.imgLocation1, p => p.imgLocation2, p => p.imgLocation3,
+                p => p.imgLocation4, p => p.fullPrice, p => p.discount, p => p.stock,
+                p => p.tags))
             {
                 _dbContext.Products.Add(emptyProduct);
                 await _dbContext.SaveChangesAsync();
-                return RedirectToPage("./");
+                return RedirectToPage("/");
             }
 
             return Page();
