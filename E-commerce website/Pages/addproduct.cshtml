@@ -21,7 +21,8 @@
     <img src="logo.png" class="logo" alt="">
 
     @*<div class="form">*@
-    <form method="post" style="margin: 0 auto;"> @*/* width: 300px;">*/*@
+    <form method="post" enctype="multipart/form-data" style="margin: 0 auto;">
+        @*/* width: 300px;">*/*@
         <input type="text" asp-for=Product.name id="product-name" placeholder="product name">
         <input type="text" asp-for=Product.descriptionShort id="short-des" placeholder="short line about the product">
         <textarea id="des" asp-for=Product.descriptionLong placeholder="detail description"></textarea>
@@ -33,13 +34,13 @@
                 <!-- upload inputs -->
                 <p class="text"><img src="camera.png" alt="">upload image</p>
                 <div class="upload-catalouge">
-                    <input type="file" class="fileupload" asp-for=Product.imgLocation1 id="first-file-upload-btn" hidden>
+                    <input type="file" class="fileupload" asp-for=Img1 id="first-file-upload-btn" hidden>
                     <label for="first-file-upload-btn" class="upload-image"></label>
-                    <input type="file" class="fileupload" asp-for=Product.imgLocation2 id="second-file-upload-btn" hidden>
+                    <input type="file" class="fileupload" asp-for=Img2 id="second-file-upload-btn" hidden>
                     <label for="second-file-upload-btn" class="upload-image"></label>
-                    <input type="file" class="fileupload" asp-for=Product.imgLocation3 id="third-file-upload-btn" hidden>
+                    <input type="file" class="fileupload" asp-for=Img3 id="third-file-upload-btn" hidden>
                     <label for="third-file-upload-btn" class="upload-image"></label>
-                    <input type="file" class="fileupload" asp-for=Product.imgLocation4 id="fourth-file-upload-btn" hidden>
+                    <input type="file" class="fileupload" asp-for=Img4 id="fourth-file-upload-btn" hidden>
                     <label for="fourth-file-upload-btn" class="upload-image"></label>
                 </div>
             </div>
