@@ -389,6 +389,10 @@
       "PackagePath": "staticwebassets\\necklaces.jpg"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\2023.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2023.jpg"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\user.png",
       "PackagePath": "staticwebassets\\user.png"
     },
