@@ -36,8 +36,8 @@ namespace E_commerce_website.Pages
             string path = "";
             if (img != null)
             {
-                var file = Path.Combine(_environment.ContentRootPath, "wwwroot\\uploads", img.FileName);
-                path = file.ToString();
+                var file = Path.Combine(_environment.ContentRootPath, "wwwroot\\uploads\\"+ img.FileName);
+                path = "wwwroot\\uploads\\" + img.FileName;
                 using (var fileStream = new FileStream(file, FileMode.Create))
                 {
                     img.CopyTo(fileStream);
@@ -50,12 +50,12 @@ namespace E_commerce_website.Pages
         {
             var emptyProduct = new Product();
 
-            var test = await TryUpdateModelAsync<Product>(
-                emptyProduct,
-                "product",   // Prefix for form value.
-                p => p.name, p => p.descriptionShort, p => p.descriptionLong,
-                 p => p.fullPrice, p => p.discount, p => p.stock, p => p.tags);
-            var modelState = ModelState.Values;
+            //var test = await TryUpdateModelAsync<Product>(
+            //    emptyProduct,
+            //    "product",   // Prefix for form value.
+            //    p => p.name, p => p.descriptionShort, p => p.descriptionLong,
+            //     p => p.fullPrice, p => p.discount, p => p.stock, p => p.tags);
+            //var modelState = ModelState.Values;
 
 
             if (await TryUpdateModelAsync<Product>(
@@ -70,7 +70,8 @@ namespace E_commerce_website.Pages
                 emptyProduct.imgLocation4 = uploadFile(Img4);
                 _dbContext.Products.Add(emptyProduct);
                 await _dbContext.SaveChangesAsync();
-                return RedirectToPage("/");
+                //return RedirectToPage("/");
+                return Page();
             }
 
             return Page();

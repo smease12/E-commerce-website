@@ -393,6 +393,18 @@
       "PackagePath": "staticwebassets\\uploads\\2023.jpg"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\home office 4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\home office 4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploadsgreece-beaches-serifos.jpeg",
+      "PackagePath": "staticwebassets\\uploadsgreece-beaches-serifos.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploadshome office.webp",
+      "PackagePath": "staticwebassets\\uploadshome office.webp"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\user.png",
       "PackagePath": "staticwebassets\\user.png"
     },
