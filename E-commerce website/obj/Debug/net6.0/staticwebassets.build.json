@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CXsr9LjnElQTdSI0iFb/J6APJVToPeCDbuDSjK07014=",
+  "Hash": "dGfojaUg18lRZ7bMvdjShn9zxL15bCmJ4Ckz+Jw3WuY=",
   "Source": "E-commerce website",
   "BasePath": "_content/E-commerce website",
   "Mode": "Default",
@@ -2737,6 +2737,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\2023.jpg"
     },
     {
+      "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\beeswax candle1.jpg",
+      "SourceId": "E-commerce website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\",
+      "BasePath": "_content/E-commerce website",
+      "RelativePath": "uploads/beeswax candle1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\beeswax candle1.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\daily exercise.webp",
       "SourceId": "E-commerce website",
       "SourceType": "Discovered",
@@ -2786,6 +2803,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\home office 4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\pexels-alina-vilchenko-11434947.jpg",
+      "SourceId": "E-commerce website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\",
+      "BasePath": "_content/E-commerce website",
+      "RelativePath": "uploads/pexels-alina-vilchenko-11434947.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\pexels-alina-vilchenko-11434947.jpg"
     },
     {
       "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploadsgreece-beaches-serifos.jpeg",

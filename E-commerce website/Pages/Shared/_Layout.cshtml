@@ -21,12 +21,16 @@
                         <input type="text" class="search-box" placeholder="search product">
                         <button class="search-btn">search</button>
                     </div>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                            <a style="margin-left: 20px;" href="/addproduct">Add Product</a>                    
+                    }
                     <div class="popup" onclick="openPopup()" style="margin-left: 20px;">
                         <span class="popuptext" id="myPopup">
                             @if (User.Identity.IsAuthenticated)
                             {
-                                @: You are logged in as @User.Identity.Name <br/>
-                                 <a href="/Logout">Log out </a>
+                                @: You are logged in as @User.Identity.Name <br />
+                                <a href="/Logout">Log out </a>
                             }
                             else
                             {
@@ -35,7 +39,7 @@
                         </span>
                         <img src="/user.png" style="width: 30px;" alt="">
                     </div>
-                    <div class="popup" onclick="openPopup2()" style="margin-left: 20px;">                       
+                    <div class="popup" onclick="openPopup2()" style="margin-left: 20px;">
                         <span class="popuptext" id="myPopup2">
                             View cart
                         </span>
