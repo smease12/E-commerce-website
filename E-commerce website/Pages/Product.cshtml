@@ -1,7 +1,6 @@
-﻿@page
+﻿@page "{productId=9}"
 @model E_commerce_website.Pages.ProductModel
-@{
-}
+
 
 @section Styles {
     <link href="@Url.Content("~/css/product.css")" rel="stylesheet" type="text/css" />
@@ -10,10 +9,14 @@
 <section class="product-details">
     <div class="image-slider">
         <div class="product-images">
-            <img src="candles.jpg" class="active" alt="">
+            <img src="@Model.Product.imgLocation1" class="active" alt="">
+            <img src="@Model.Product.imgLocation2" alt="">
+            <img src="@Model.Product.imgLocation3" alt="">
+            <img src="@Model.Product.imgLocation4" alt="">
+       @*     <img src="candles.jpg" class="active" alt="">
             <img src="candle 1.png"  alt="">
             <img src="candle 2.png" alt="">
-            <img src="candle 3.png" alt="">
+            <img src="candle 3.png" alt="">*@
             @*<img src="candle 4.png" alt="">*@
         </div>
     </div>
