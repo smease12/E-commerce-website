@@ -125,6 +125,10 @@
       "PackagePath": "staticwebassets\\gift wrapping.png"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\js\\addproduct.js",
+      "PackagePath": "staticwebassets\\js\\addproduct.js"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\js\\form.js",
       "PackagePath": "staticwebassets\\js\\form.js"
     },
@@ -391,6 +395,14 @@
     {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\2023.jpg",
       "PackagePath": "staticwebassets\\uploads\\2023.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\Dog.jpg",
+      "PackagePath": "staticwebassets\\uploads\\Dog.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\daily exercise.webp",
+      "PackagePath": "staticwebassets\\uploads\\daily exercise.webp"
     },
     {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\home office 4.jpg",
