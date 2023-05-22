@@ -135,6 +135,9 @@ namespace E_commerce_website.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<decimal?>("sellPrice")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<int>("stock")
                         .HasColumnType("int");
 

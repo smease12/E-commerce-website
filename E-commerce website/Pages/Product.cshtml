@@ -7,25 +7,20 @@
 }
 
 <section class="product-details">
-    <div class="image-slider">
+    <div class="image-slider" style="background-image: url('@Url.Content("~/uploads/"+Model.Product.imgLocation1)');">
         <div class="product-images">
-            <img src="@Model.Product.imgLocation1" class="active" alt="">
-            <img src="@Model.Product.imgLocation2" alt="">
-            <img src="@Model.Product.imgLocation3" alt="">
-            <img src="@Model.Product.imgLocation4" alt="">
-       @*     <img src="candles.jpg" class="active" alt="">
-            <img src="candle 1.png"  alt="">
-            <img src="candle 2.png" alt="">
-            <img src="candle 3.png" alt="">*@
-            @*<img src="candle 4.png" alt="">*@
+            <img src="~/uploads/@Model.Product.imgLocation1" class="active" alt="">
+            <img src="~/uploads/@Model.Product.imgLocation2" alt="">
+            <img src="~/uploads/@Model.Product.imgLocation3" alt="">
+            <img src="~/uploads/@Model.Product.imgLocation4" alt="">
         </div>
     </div>
     <div class="details">
-        <h2 class="product-brand">scented candles</h2>
-        <p class="product-short-des">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-        <span class="product-price">$20</span>
-        <span class="product-actual-price">$40</span>
-        <span class="product-discount">( 50% off )</span>
+        <h2 class="product-brand">@Model.Product.name</h2>
+        <p class="product-short-des">@Model.Product.descriptionShort</p>
+        <span class="product-price">$@Model.Product.fullPrice</span>
+        <span class="product-actual-price">$@Model.Product.fullPrice</span>
+        <span class="product-discount">( @Model.Product.discount% off )</span>
 
         <p class="product-sub-heading">select scent</p>
 
@@ -47,12 +42,12 @@
 
 <section class="detail-des">
     <h2 class="heading">description</h2>
-    <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ......</p>
+    <p class="des">@Model.Product.descriptionLong</p>
 </section>
 
 @section Scripts
     {
-    <script src="js/product.js"></script>
+    <script src="~/js/product.js"></script>
 }
 
 

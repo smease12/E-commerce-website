@@ -30,14 +30,14 @@ namespace E_commerce_website.Pages
         {
         }
 
-        //upload a file and return the file location as a string
+        //check if file upload has a file, upload a file, and return the file name as a string
         private string uploadFile(IFormFile img) 
         {
             string path = "";
             if (img != null)
             {
                 var file = Path.Combine(_environment.ContentRootPath, "wwwroot\\uploads\\"+ img.FileName);
-                path = "wwwroot\\uploads\\" + img.FileName;
+                path =  img.FileName; //update to only store img file name in database, figure out entire path elsewhere
                 using (var fileStream = new FileStream(file, FileMode.Create))
                 {
                     img.CopyTo(fileStream);
@@ -55,12 +55,14 @@ namespace E_commerce_website.Pages
         {
             var emptyProduct = new Product();
 
+            #region check modelstate
             //var test = await TryUpdateModelAsync<Product>(
             //    emptyProduct,
             //    "product",   // Prefix for form value.
             //    p => p.name, p => p.descriptionShort, p => p.descriptionLong,
             //     p => p.fullPrice, p => p.discount, p => p.stock, p => p.tags);
             //var modelState = ModelState.Values;
+            #endregion
 
 
             if (await TryUpdateModelAsync<Product>(

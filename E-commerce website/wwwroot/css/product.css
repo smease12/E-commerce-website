@@ -9,7 +9,7 @@
     width: 500px;
     height: 500px;
     position: relative;
-    background-image: url('../candles.jpg');
+  /*  background-image: url('../candles.jpg');  move to page to adjust based on product*/
     background-size: cover;
 }
 
