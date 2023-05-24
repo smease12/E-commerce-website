@@ -69,7 +69,8 @@ namespace E_commerce_website.Pages
                 emptyProduct,
                 "product",   // Prefix for form value.
                 p => p.name, p=> p.descriptionShort, p => p.descriptionLong,
-                 p => p.fullPrice, p => p.discount, p => p.stock, p => p.tags))
+                 p => p.fullPrice, p => p.discount, p => p.stock, p => p.tags,
+                 p=> p.sellPrice))
             {
                 emptyProduct.imgLocation1 = uploadFile(Img1);
                 emptyProduct.imgLocation2 = uploadFile(Img2);
