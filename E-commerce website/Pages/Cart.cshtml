@@ -1,4 +1,38 @@
-﻿@page
+﻿@page "{UserId=1}"
 @model E_commerce_website.Pages.CartModel
-@{
+
+
+@section Styles {
+    <link href="@Url.Content("~/css/product.css")" rel="stylesheet" type="text/css" />
 }
+
+<section class="product-details">
+    <div class="details" style="width: 100%">
+        <h2 class="product-brand">Shopping Cart</h2>
+        <a href="#">Deselect all items</a>
+
+        <p class="product-sub-heading">Products</p>
+            
+        <div class="row">
+            <div  style="border:1px solid black;">
+                <div class="col-lg-1">checkbox</div>
+                <div class="col-lg-2">product image</div>
+                <div class="col-lg-4">product name and details</div>
+                <div class="col-lg-2">price</div>   
+            </div>
+            <div class="col-lg-3">Subtotal (1 item): $50.00</div>
+        </div>
+    </div>
+</section>
+
+<section class="detail-des">
+    <h2 class="heading">Subtotal (1 item): $50.00</h2>
+    @*<p class="des">Subtotal (1 item): $50.00</p>*@
+</section>
+
+@section Scripts
+    {
+    <script src="~/js/product.js"></script>
+}
+
+

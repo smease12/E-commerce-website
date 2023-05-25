@@ -46,11 +46,6 @@ namespace E_commerce_website.Pages
             return path;
         }
 
-        public void OnPostUploadPhoto() 
-        {
-            int foo = 0;
-        }
-
         public async Task<IActionResult> OnPostAsync()
         {
             var emptyProduct = new Product();
