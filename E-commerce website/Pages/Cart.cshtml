@@ -12,15 +12,26 @@
         <a href="#">Deselect all items</a>
 
         <p class="product-sub-heading">Products</p>
-            
+        @*style="border-left:solid; border-top:solid;s
+        border-bottom:solid;"*@
         <div class="row">
-            <div  style="border:1px solid black;">
-                <div class="col-lg-1">checkbox</div>
-                <div class="col-lg-2">product image</div>
-                <div class="col-lg-4">product name and details</div>
-                <div class="col-lg-2">price</div>   
+
+            <div class="col-lg-1" >
+                <span class="border-top border-bottom border-start border-end-0">
+                    checkbox
+                </span>
+                </div>
+            <div class="col-lg-2" >
+                product image
             </div>
-            <div class="col-lg-3">Subtotal (1 item): $50.00</div>
+            <div class="col-lg-4" >
+                product name and details</div>
+            <div class="col-lg-2" >price</div>
+ 
+            <div class="col-lg-3">
+                <p>Subtotal (1 item): $50.00</p>
+                <p><button class="buttons">Proceed to Checkout</button></p>
+                </div>
         </div>
     </div>
 </section>
