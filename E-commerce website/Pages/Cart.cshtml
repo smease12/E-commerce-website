@@ -4,6 +4,7 @@
 
 @section Styles {
     <link href="@Url.Content("~/css/product.css")" rel="stylesheet" type="text/css" />
+    < href="@Url.Content("~/css/form.css")" rel="stylesheet" type="text/css"/>
 }
 
 <section class="product-details">
@@ -12,14 +13,18 @@
         <a href="#">Deselect all items</a>
 
         <p class="product-sub-heading">Products</p>
-        @*style="border-left:solid; border-top:solid;s
+        @*style="border-left:solid; border-top:solid;
         border-bottom:solid;"
         https://getbootstrap.com/docs/5.3/layout/grid/*@
         <div class="row">
             <div class="col-9" >
-                <div class="row">
-                    <div class="col-1"> checkbox </div>
-                    <div class="col-2" > product image </div>
+                <div class="row border border-dark">
+                    <div class="col-1">
+                        <input type="checkbox" class="checkbox" id="selected">
+                    </div>
+                    <div class="col-2" > 
+                        <img src="#"/>   
+                    </div>
                     <div class="col-4" > product name and details </div>
                     <div class="col-3" >price</div>
                 </div>
