@@ -1,4 +1,4 @@
-﻿@page "{UserId=1}"
+﻿@page 
 @model E_commerce_website.Pages.CartModel
 
 
@@ -23,14 +23,14 @@
                         <input type="checkbox" class="checkbox" id="selected">
                     </div>
                     <div class="col-2" > 
-                        <img src="#"/>   
+                        <img style="height:100px; width:100px" src="~/uploads/@Model.Products[0].imgLocation1"/>   
                     </div>
-                    <div class="col-4" > product name and details </div>
-                    <div class="col-3" >price</div>
+                    <div class="col-4" > @Model.Products[0].name </div>
+                    <div class="col-3" >@Model.Products[0].sellPrice</div>
                 </div>
             </div>
             <div class="col-3">
-                <p>Subtotal (1 item): $50.00</p>
+                <p>Subtotal (1 item): $@Model.Products[0].sellPrice</p>
                 <p><button class="buttons">Proceed to Checkout</button></p>
             </div>
         </div>
@@ -38,7 +38,7 @@
 </section>
 
 <section class="detail-des">
-    <h2 class="heading">Subtotal (1 item): $50.00</h2>
+    <h2 class="heading">Subtotal (1 item): $@Model.Products[0].sellPrice</h2>
     @*<p class="des">Subtotal (1 item): $50.00</p>*@
 </section>
 
