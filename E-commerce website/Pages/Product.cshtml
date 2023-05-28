@@ -15,14 +15,25 @@
             <img src="~/uploads/@Model.Product.imgLocation4" alt="">
         </div>
     </div>
-    <div class="details">
+    <form method="post" class="details">
+        <input type="hidden" asp-for="Product.id" name="Product.id"/>
+        <input type="hidden" asp-for="Product.name" name="Product.name" />
+        <input type="hidden" asp-for="Product.imgLocation1" name="Product.imgLocation1" />
+        <input type="hidden" asp-for="Product.imgLocation2" name="Product.imgLocation2" />
+        <input type="hidden" asp-for="Product.imgLocation3" name="Product.imgLocation3" />
+        <input type="hidden" asp-for="Product.imgLocation4" name="Product.imgLocation4" />
+        <input type="hidden" asp-for="Product.descriptionShort" />
+        <input type="hidden" asp-for="Product.descriptionLong" />
+        <input type="hidden" asp-for="Product.sellPrice" />
+        <input type="hidden" asp-for="Product.fullPrice" />
+        <input type="hidden" asp-for="Product.discount" />
         <h2 class="product-brand">@Model.Product.name</h2>
         <p class="product-short-des">@Model.Product.descriptionShort</p>
-        <span class="product-price">$@Model.Product.fullPrice</span>
+        <span class="product-price">$@Model.Product.sellPrice</span>
         <span class="product-actual-price">$@Model.Product.fullPrice</span>
         <span class="product-discount">( @Model.Product.discount% off )</span>
 
-        <p class="product-sub-heading">select scent</p>
+      @*  <p class="product-sub-heading">select scent</p>
 
         <input type="radio" name="scent" value="christmas" checked hidden id="christmas-scent">
         <label for="christmas-scent" class="scent-radio-btn check">christmas</label>
@@ -31,13 +42,14 @@
         <input type="radio" name="scent" value="linen" hidden id="linen-scent">
         <label for="linen-scent" class="scent-radio-btn">linen</label>
         <input type="radio" name="scent" value="rose" hidden id="rose-scent">
-        <label for="rose-scent" class="scent-radio-btn">rose</label>
+        <label for="rose-scent" class="scent-radio-btn">rose</label>*@
         @*<input type="radio" name="scent" value="lavender" hidden id="lavender-scent">
         <label for="lavender-scent" class="scent-radio-btn">lavender</label>*@
-
-        <button class="btn cart-btn">add to cart</button>
+        <p>
+        <button type="submit" class="btn cart-btn">add to cart</button>
         <button class="btn">add to wishlist</button>
-    </div>
+        </p>
+    </form>
 </section>
 
 <section class="detail-des">
