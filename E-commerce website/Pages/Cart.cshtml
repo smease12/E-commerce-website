@@ -16,17 +16,17 @@
         @*style="border-left:solid; border-top:solid;
         border-bottom:solid;"
         https://getbootstrap.com/docs/5.3/layout/grid/*@
-        <div class="row">
+        <div class="row text-center align-items-center ">
             <div class="col-9" >
-                <div class="row border border-dark">
-                    <div class="col-1">
+                <div class="row border border-dark align-items-center">
+                    <div class="col-1 m-3">
                         <input type="checkbox" class="checkbox" id="selected">
                     </div>
-                    <div class="col-2" > 
+                    <div class="col-2 m-3" > 
                         <img style="height:100px; width:100px" src="~/uploads/@Model.Products[0].imgLocation1"/>   
                     </div>
-                    <div class="col-4" > @Model.Products[0].name </div>
-                    <div class="col-3" >@Model.Products[0].sellPrice</div>
+                    <div class="col-4 m-3" > @Model.Products[0].name </div>
+                    <div class="col-3 m-3" >@Model.Products[0].sellPrice</div>
                 </div>
             </div>
             <div class="col-3">
