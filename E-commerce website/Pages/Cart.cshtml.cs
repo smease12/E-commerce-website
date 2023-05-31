@@ -10,6 +10,8 @@ namespace E_commerce_website.Pages
     {
         [BindProperty]
         public List<Product> Products { get; set; }
+        [BindProperty]
+        public int Count { get; set; }
         private readonly ECommerceDBContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
 
@@ -31,9 +33,15 @@ namespace E_commerce_website.Pages
                     );
 
                 Products = await result.ToListAsync();
+                Count = Products.Count();
             }
-
+            
             return Page();
+        }
+
+        public void OnPost() 
+        {
+            int foo = 0;
         }
     }
 }
