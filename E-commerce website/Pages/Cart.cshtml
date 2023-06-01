@@ -7,7 +7,7 @@
     @*<link href="@Url.Content("~/css/form.css")" rel="stylesheet" type="text/css"/>*@
 }
         @{
-            decimal? totalPrice = 0;
+           
 <section class="product-details">
     <div class="details" style="width: 100%">
         <h2 class="product-brand">Shopping Cart</h2>
@@ -17,12 +17,12 @@
 
         <form method="post" class="row text-center align-items-center ">
         <input type="hidden" asp-for="Count"/>
+        <input type="hidden" asp-for="TotalPrice"/>
             <div class="col-9" >
                 @foreach(var product in Model.Products){
                         <input type="hidden" asp-for="@product.sellPrice" id="product.sellPrice" name="product.sellPrice" />
                     <input type="hidden" asp-for="@product.name"/>
   
-                    totalPrice = totalPrice + product.sellPrice;
                  <div class="row border border-dark align-items-center">
                     <div class="col-1 m-3">
                         <input type="checkbox" class="checkbox" id="selected">
@@ -38,11 +38,11 @@
             </div>
             <div class="col-3">
             @if(Model.Count > 1){
-                        <p>Subtotal (@Model.Count items): $@totalPrice</p>
+                        <p>Subtotal (@Model.Count items): $@Model.TotalPrice</p>
                     }
                     else
                     {
-                        <p>Subtotal (@Model.Count item): $@totalPrice</p>
+                        <p>Subtotal (@Model.Count item): $@Model.TotalPrice</p>
                     }
                     <p><button class="buttons">Proceed to Checkout</button></p>
             </div>
@@ -55,11 +55,11 @@
 <section class="detail-des">
     @if(Model.Count > 1)
     {
-            <h2 class="heading">Subtotal (@Model.Count items): $@totalPrice</h2>
+            <h2 class="heading">Subtotal (@Model.Count items): $@Model.TotalPrice</h2>
     }
     else
     {
-            <h2 class="heading">Subtotal (@Model.Count item): $@totalPrice</h2>
+            <h2 class="heading">Subtotal (@Model.Count item): $@Model.TotalPrice</h2>
     }
 </section>
 }

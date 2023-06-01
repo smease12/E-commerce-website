@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace E_commerce_website.Pages
 {
@@ -12,6 +13,8 @@ namespace E_commerce_website.Pages
         public List<Product> Products { get; set; }
         [BindProperty]
         public int Count { get; set; }
+        [BindProperty]
+        public decimal TotalPrice { get; set; }
         private readonly ECommerceDBContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
 
@@ -34,6 +37,7 @@ namespace E_commerce_website.Pages
 
                 Products = await result.ToListAsync();
                 Count = Products.Count();
+                TotalPrice = (decimal)Products.Sum(s=> s.sellPrice);
             }
             
             return Page();
