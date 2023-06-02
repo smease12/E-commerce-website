@@ -166,6 +166,9 @@ namespace E_commerce_website.Migrations
                     b.Property<int>("Productid")
                         .HasColumnType("int");
 
+                    b.Property<int?>("Quantity")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ApplicationUserId");
