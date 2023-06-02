@@ -45,7 +45,8 @@ namespace E_commerce_website.Pages
 
         public void OnPost() 
         {
-            int foo = 0;
+            var postedValues = Products;
+            Products = new List<Product>(postedValues);
         }
     }
 }
