@@ -20,26 +20,20 @@
         <input type="hidden" asp-for="TotalPrice"/>
             <div class="col-9" >
                 @for(int i=0; i< Model.Products.Count; i++){
-                        <input type="hidden" asp-for="@Model.Products[i].id" />
-                        <input type="hidden" asp-for="@Model.Products[i].name" />
-                        <input type="hidden" asp-for="@Model.Products[i].imgLocation1" />
-                        <input type="hidden" asp-for="@Model.Products[i].imgLocation2" />
-                        <input type="hidden" asp-for="@Model.Products[i].imgLocation3" />
-                        <input type="hidden" asp-for="@Model.Products[i].imgLocation4" />
-                        <input type="hidden" asp-for="@Model.Products[i].fullPrice" />
-                        <input type="hidden" asp-for="@Model.Products[i].descriptionLong" />
-                        <input type="hidden" asp-for="@Model.Products[i].descriptionShort" />
-                        <input type="hidden" asp-for="@Model.Products[i].stock" />
-                        <input type="hidden" asp-for="@Model.Products[i].tags" />
+                        <input type="hidden" asp-for="@Model.Products[i].ProductId" />
+                        <input type="hidden" asp-for="@Model.Products[i].ProductName" />
+                        <input type="hidden" asp-for="@Model.Products[i].ProductImg" />
+                        <input type="hidden" asp-for="@Model.Products[i].ProductSellPrice" />
+                        <input type="hidden" asp-for="@Model.Products[i].ProductQty" />
                  <div class="row border border-dark align-items-center">
                     <div class="col-1 m-3">
                         <input type="checkbox" class="checkbox" id="selected">
                     </div>
                     <div class="col-2 m-3" > 
-                                <img style="height:100px; width:100px" src="~/uploads/@@Model.Products[i].imgLocation1" />
+                                <img style="height:100px; width:100px" src="~/uploads/@Model.Products[i].ProductImg" />
                     </div>
-                            <div class="col-4 m-3"> @Model.Products[i].name </div>
-                            <div class="col-3 m-3">@Model.Products[i].sellPrice</div>
+                            <div class="col-4 m-3"> @Model.Products[i].ProductName </div>
+                            <div class="col-3 m-3">@Model.Products[i].ProductSellPrice</div>
                 </div>
                 }
                 
