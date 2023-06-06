@@ -4,6 +4,7 @@
 
 @section Styles {
     <link href="@Url.Content("~/css/product.css")" rel="stylesheet" type="text/css" />
+
     @*<link href="@Url.Content("~/css/form.css")" rel="stylesheet" type="text/css"/>*@
 }
         @{
@@ -46,7 +47,20 @@
                     {
                         <p>Subtotal (@Model.Count item): $@Model.TotalPrice</p>
                     }
-                    <p><button type="submit" class="buttons">Proceed to Checkout</button></p>
+                    <p>
+                        <button type="submit" class="buttons" style="    
+                        padding: 10px 30px;
+                        text-transform: capitalize;
+                        color: #fff;
+                        background: #383838;
+                        border-radius: 5px;
+                        border: none;
+                         outline: none;
+                         margin-right: 10px;
+                            cursor: pointer;">
+                            Proceed to Checkout
+                        </button>
+                    </p>
             </div>
             
         </form>
