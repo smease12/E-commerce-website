@@ -23,25 +23,29 @@
                     </div>
                     @if (User.Identity.IsAuthenticated)
                     {
-                            <a style="margin-left: 20px;" href="/addproduct">Add Product</a>                    
+                            <a style="margin-left: 20px; 
+                                text-decoration: none; 
+                                 href="/addproduct">Add Product</a>                    
                     }
                     <div class="popup" onclick="openPopup()" style="margin-left: 20px;">
                         <span class="popuptext" id="myPopup">
                             @if (User.Identity.IsAuthenticated)
                             {
                                 @: You are logged in as @User.Identity.Name <br />
-                                <a href="/Logout">Log out </a>
+                                <a style="margin-left: 20px;
+                              
+                                color: white" href="/Logout">Log out </a>
                             }
                             else
                             {
-                                @: <a href="/Login">Sign in</a>
+                                @: <a style="margin-left: 20px;  color:white" href="/Login">Login</a>
                             }
                         </span>
                         <img src="/user.png" style="width: 30px;" alt="">
                     </div>
                     <div class="popup" onclick="openPopup2()" style="margin-left: 20px;">
                         <span class="popuptext" id="myPopup2">
-                            <a href="/Cart">View cart</a>
+                            <a href="/Cart" style="color:white">View cart</a>
                         </span>
                         <img src="/cart.png" alt="" style="width: 30px;">
                     </div>
