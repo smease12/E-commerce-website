@@ -51,10 +51,13 @@ namespace E_commerce_website.Pages
             return Page();
         }
 
-        public void OnPost() 
+        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
+            returnUrl ??= Url.Content("~/Checkout");
             var postedValues = Products;
             Products = new List<CartProductVM>(postedValues);
+            return LocalRedirect(returnUrl);
+
         }
     }
 }
