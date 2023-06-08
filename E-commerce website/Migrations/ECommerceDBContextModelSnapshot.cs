@@ -30,6 +30,21 @@ namespace E_commerce_website.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("AddressCity")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AddressState")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AddressStreet")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AddressUnitNum")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("AddressZipCode")
+                        .HasColumnType("int");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");

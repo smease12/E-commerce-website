@@ -12,22 +12,66 @@
 
 <section class="product-details">
     <div class="details" style="width: 100%">
-        <h2 class="product-brand">Checkout (@Model.Count Item(s))</h2>
+    @if(Model.Count > 1){
+                <h2 class="product-brand">Checkout (@Model.Count Items)</h2>
+            }
+            else
+            {
+                <h2 class="product-brand">Checkout (@Model.Count Item)</h2>
+        }
 
         <form method="post" class="row text-center align-items-center ">
-
             <div class="col-9">
+                <div class="row">
                     <div class="col-1 m-3">
                         <p class="product-sub-heading">1</p>
                     </div>
-                    <div class="col-1 m-3">
-                        <p class="product-sub-heading">2</p>
+                        <div class="col-3 m-3">
+                            <p class="product-sub-heading">Shipping address</p>
+                        </div>
+                        <div class="col-3 m-3">
+                            <p style="margin:70px 0 10px;">123 Test Address</p>
+                            <p>Test, PA 12345</p>
+                        </div>
+                        <div class="col-2 m-3">
+                            <p style="margin:70px 0 10px;"><a href="">Change</a></p>
+                        </div>
+                </div>
+                    <div class="row">
+                        <div class="col-1 m-3">
+                            <p class="product-sub-heading">2</p>
+                        </div>
+                        <div class="col-3 m-3">
+                            <p class="product-sub-heading">Payment method</p>
+                        </div>
+                        <div class="col-3 m-3">
+                            <p style="margin:70px 0 10px;">Visa ending in 1234</p>
+                        </div>
+                        <div class="col-2 m-3">
+                            <p style="margin:70px 0 10px;"><a href="">Change</a></p>
+                        </div>
                     </div>
-                    <div class="col-1 m-3">
-                        <p class="product-sub-heading">3</p>
+                    <div class="row">
+                        <div class="col-1 m-3">
+                            <p class="product-sub-heading">3</p>
+                        </div>
+                        <div class="col-3 m-3">
+                            <p class="product-sub-heading">Offers</p>
+                        </div>
+                        <div class="col-3 m-3">
+                           
+                        </div>
+                        <div class="col-2 m-3">
+                            <p style="margin:70px 0 10px;"><a href="">Change</a></p>
+                        </div>
                     </div>
-                    <div class="col-1 m-3">
-                        <p class="product-sub-heading">4</p>
+                    <div class="row">
+                        <div class="col-1 m-3">
+                            <p class="product-sub-heading">4</p>
+                        </div>
+                        <div class="col-3 m-3">
+                            <p class="product-sub-heading">Review items and shipping</p>
+                        </div>
                     </div>
             </div>
             <div class="col-3">
