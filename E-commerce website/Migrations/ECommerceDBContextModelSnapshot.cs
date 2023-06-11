@@ -150,9 +150,6 @@ namespace E_commerce_website.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("quantity")
-                        .HasColumnType("int");
-
                     b.Property<decimal?>("sellPrice")
                         .HasColumnType("decimal(18,2)");
 
@@ -179,6 +176,9 @@ namespace E_commerce_website.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime?>("DateAdded")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateDelivery")
                         .HasColumnType("datetime2");
 
                     b.Property<int>("Productid")

@@ -7,6 +7,7 @@
         public string? ProductImg { get; set; }
         public decimal? ProductSellPrice { get; set; }
         public int? ProductQty { get; set; }
+        public DateTime? DeliveryDate { get; set; }
 
     }
 }

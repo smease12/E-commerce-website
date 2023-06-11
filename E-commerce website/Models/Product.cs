@@ -19,7 +19,6 @@ namespace E_commerce_website.Models
         public decimal? sellPrice { get; set; }
         public int stock { get; set; }
         public string? tags { get; set; }
-        public int? quantity { get; set; }
         
     }
 }

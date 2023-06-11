@@ -39,7 +39,7 @@ namespace E_commerce_website.Pages
                                   ProductName = p.name,
                                   ProductImg = p.imgLocation1,
                                   ProductSellPrice = p.sellPrice,
-                                  ProductQty = p.quantity
+                                  ProductQty = u.Quantity
                               }
                     );
 
