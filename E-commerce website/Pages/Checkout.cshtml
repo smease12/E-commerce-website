@@ -75,6 +75,11 @@
                         </div>
                         <div class="col-3 m-3">
                             <p class="product-sub-heading">Review items and shipping</p>
+                            @for(int i =0; i<Model.Products.Count; i++)
+                            {
+                                <p>Delivery: @Model.Products[i].DeliveryDate</p>
+                                <p>@Model.Products[i].ProductName</p>
+                            }
                         </div>
                     </div>
                 </div>
