@@ -75,11 +75,16 @@
                         </div>
                         <div class="col-3 m-3">
                             <p class="product-sub-heading">Review items and shipping</p>
+                            <p style="border-style: solid">
                             @for(int i =0; i<Model.Products.Count; i++)
                             {
-                                <p>Delivery: @Model.Products[i].DeliveryDate</p>
-                                <p>@Model.Products[i].ProductName</p>
+                                <label>Delivery</label> @Model.Products[i].DeliveryDate
+                                
+                                <img style="height:100px; width:100px" src="~/uploads/@Model.Products[i].ProductImg" />
+                                @Model.Products[i].ProductName
+                                
                             }
+                            </p>
                         </div>
                     </div>
                 </div>
