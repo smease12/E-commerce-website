@@ -1,17 +1,28 @@
 ﻿@page
 @model E_commerce_website.Pages.CheckoutModel
 @{
+    Layout = null;
 }
 
 @section Styles {
-    <link href="@Url.Content("~/css/product.css")" rel="stylesheet" type="text/css" />
-    @*<link href="@Url.Content("~/css/form.css")" rel="stylesheet" type="text/css"/>*@
+   @* <link href="@Url.Content("~/css/product.css")" rel="stylesheet" type="text/css" />*@
+    @*<link href="@Url.Content("~/lib/bootstrap/dist/css/bootstrap.min.css")" rel="stylesheet" type="text/css"/>*@
 }
-@{
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Smease12 Gifts</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/form.css" asp-append-version="true" />
+</head>
+
+<body>
 
 
-    <section class="product-details">
-        <div class="details" style="width: 100%">
+    <div style="width: 100%">
             @if (Model.Count > 1)
             {
                 <row class="border-bottom">
@@ -73,18 +84,20 @@
                         <div class="col-1 m-3">
                             <p class="product-sub-heading">4</p>
                         </div>
-                        <div class="col-3 m-3">
-                            <p class="product-sub-heading">Review items and shipping</p>
-                            <p style="border-style: solid">
-                            @for(int i =0; i<Model.Products.Count; i++)
+                        <div class="col-3 m-3" >
+                            <p class="product-sub-heading">Review items and shipping</p>                                              
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1 m-3"></div>
+                        <div class="col-8 p-2 m-3 border" >
+                            @for (int i = 0; i < Model.Products.Count; i++)
                             {
-                                <label>Delivery</label> @Model.Products[i].DeliveryDate
-                                
+                                  @Model.Products[i].DeliveryDate
+
                                 <img style="height:100px; width:100px" src="~/uploads/@Model.Products[i].ProductImg" />
                                 @Model.Products[i].ProductName
-                                
                             }
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -126,9 +139,16 @@
             </form>
 
         </div>
-    </section>
+    
 }
+</body>
 @section Scripts
     {
     <script src="~/js/product.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 }
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<partial name="_ValidationScriptsPartial" />
+<script src="~/lib/jquery-ajax-unobtrusive/dist/jquery.unobtrusive-ajax.min.js"></script>
+</html>
