@@ -5,7 +5,7 @@
 }
 
 @section Styles {
-   @* <link href="@Url.Content("~/css/product.css")" rel="stylesheet" type="text/css" />*@
+    @* <link href="@Url.Content("~/css/product.css")" rel="stylesheet" type="text/css" />*@
     @*<link href="@Url.Content("~/lib/bootstrap/dist/css/bootstrap.min.css")" rel="stylesheet" type="text/css"/>*@
 }
 
@@ -23,87 +23,94 @@
 
 
     <div style="width: 100%">
-            @if (Model.Count > 1)
-            {
-                <row class="border-bottom">
-                    <h2 class="product-brand">Checkout (@Model.Count Items)</h2>
-                </row>
-            }
-            else
-            {
-                <row class="border-bottom">
-                    <h2 class="product-brand">Checkout (@Model.Count Item)</h2>
-                </row>
-            }
+        @if (Model.Count > 1)
+        {
+            <row class="border-bottom">
+                <h2 class="product-brand">Checkout (@Model.Count Items)</h2>
+            </row>
+        }
+        else
+        {
+            <row class="border-bottom">
+                <h2 class="product-brand">Checkout (@Model.Count Item)</h2>
+            </row>
+        }
 
-            <form method="post" class="row">
-                <div class="col-9 text-center align-items-center">
-                    <div class="row">
-                        <div class="col-1 m-3">
-                            <p class="product-sub-heading">1</p>
-                        </div>
-                        <div class="col-3 m-3">
-                            <p class="product-sub-heading">Shipping address</p>
-                        </div>
-                        <div class="col-3 m-3">
-                            <p style="margin:70px 0 10px;">123 Test Address</p>
-                            <p>Test, PA 12345</p>
-                        </div>
-                        <div class="col-2 m-3">
-                            <p style="margin:70px 0 10px;"><a href="">Change</a></p>
-                        </div>
+        <form method="post" class="row">
+            <div class="col-9 text-center align-items-center">
+                <div class="row">
+                    <div class="col-1 m-3">
+                        <p class="product-sub-heading">1</p>
                     </div>
-                    <div class="row">
-                        <div class="col-1 m-3">
-                            <p class="product-sub-heading">2</p>
-                        </div>
-                        <div class="col-3 m-3">
-                            <p class="product-sub-heading">Payment method</p>
-                        </div>
-                        <div class="col-3 m-3">
-                            <p style="margin:70px 0 10px;">Visa ending in 1234</p>
-                        </div>
-                        <div class="col-2 m-3">
-                            <p style="margin:70px 0 10px;"><a href="">Change</a></p>
-                        </div>
+                    <div class="col-3 m-3">
+                        <p class="product-sub-heading">Shipping address</p>
                     </div>
-                    <div class="row">
-                        <div class="col-1 m-3">
-                            <p class="product-sub-heading">3</p>
-                        </div>
-                        <div class="col-3 m-3">
-                            <p class="product-sub-heading">Offers</p>
-                        </div>
-                        <div class="col-3 m-3">
-                        </div>
-                        <div class="col-2 m-3">
-                            <p style="margin:70px 0 10px;"><a href="">Change</a></p>
-                        </div>
+                    <div class="col-3 m-3">
+                        <p style="margin:70px 0 10px;">123 Test Address</p>
+                        <p>Test, PA 12345</p>
                     </div>
-                    <div class="row">
-                        <div class="col-1 m-3">
-                            <p class="product-sub-heading">4</p>
-                        </div>
-                        <div class="col-3 m-3" >
-                            <p class="product-sub-heading">Review items and shipping</p>                                              
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1 m-3"></div>
-                        <div class="col-8 p-2 m-3 border" >
-                            @for (int i = 0; i < Model.Products.Count; i++)
-                            {
-                                  @Model.Products[i].DeliveryDate
-
-                                <img style="height:100px; width:100px" src="~/uploads/@Model.Products[i].ProductImg" />
-                                @Model.Products[i].ProductName
-                            }
-                        </div>
+                    <div class="col-2 m-3">
+                        <p style="margin:70px 0 10px;"><a href="">Change</a></p>
                     </div>
                 </div>
-                <div class="col-3" style="margin:70px 0 10px;">
-                    <p style="border-bottom: medium;">
-                        <button type="submit" class="buttons" style="
+                <div class="row">
+                    <div class="col-1 m-3">
+                        <p class="product-sub-heading">2</p>
+                    </div>
+                    <div class="col-3 m-3">
+                        <p class="product-sub-heading">Payment method</p>
+                    </div>
+                    <div class="col-3 m-3">
+                        <p style="margin:70px 0 10px;">Visa ending in 1234</p>
+                    </div>
+                    <div class="col-2 m-3">
+                        <p style="margin:70px 0 10px;"><a href="">Change</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 m-3">
+                        <p class="product-sub-heading">3</p>
+                    </div>
+                    <div class="col-3 m-3">
+                        <p class="product-sub-heading">Offers</p>
+                    </div>
+                    <div class="col-3 m-3">
+                    </div>
+                    <div class="col-2 m-3">
+                        <p style="margin:70px 0 10px;"><a href="">Change</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 m-3">
+                        <p class="product-sub-heading">4</p>
+                    </div>
+                    <div class="col-3 m-3">
+                        <p class="product-sub-heading">Review items and shipping</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1 m-3"></div>
+                    <div class="col-8 p-2 m-3 border">
+                        @for (int i = 0; i < Model.Products.Count; i++)
+                        {
+                            @Model.Products[i].DeliveryDate
+                            <div class="row m-2">
+                                <div class="col-3">
+                                    <img style="height:100px; width:120px;" src="~/uploads/@Model.Products[i].ProductImg" />
+                                </div>
+                                <div class="col-6">
+                                    <p style="margin:30px 0 10px;">@Model.Products[i].ProductName</p>
+                               
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-3" style="margin:70px 0 10px;">
+                <p style="border-bottom: medium;">
+                    <button type="submit" class="buttons" style="
                                 padding: 10px 30px;
                                 text-transform: capitalize;
                                 color: #fff;
@@ -113,34 +120,34 @@
                                  outline: none;
                                  margin-right: 10px;
                                     cursor: pointer;">
-                            Place Your Order
-                        </button>
-                    </p>
-                    <p>
-                        Order Summary
-                    </p>
-                    <p>
-                        Items: $5.00
-                    </p>
-                    <p>
-                        Shippging/Handling: $5.00
-                    </p>
-                    <p>
-                        Total before tax: $10.00
-                    </p>
-                    <p>
-                        Tax: $0.50
-                    </p>
-                    <p>
-                        Order Total $10.50
-                    </p>
-                </div>
+                        Place Your Order
+                    </button>
+                </p>
+                <p>
+                    Order Summary
+                </p>
+                <p>
+                    Items: $@Model.TotalPrice
+                </p>
+                <p>
+                    Shippging/Handling: $@Model.Shipping
+                </p>
+                <p>
+                    Total before tax: $@Model.TotalBeforeTax
+                </p>
+                <p>
+                    Tax: $@Model.Tax
+                </p>
+                <p>
+                    Order Total $@Model.OrderTotal
+                </p>
+            </div>
 
-            </form>
+        </form>
 
-        </div>
-    
-}
+    </div>
+
+    }
 </body>
 @section Scripts
     {
@@ -149,6 +156,7 @@
 }
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <partial name="_ValidationScriptsPartial" />
-<script src="~/lib/jquery-ajax-unobtrusive/dist/jquery.unobtrusive-ajax.min.js"></script>
+
 </html>

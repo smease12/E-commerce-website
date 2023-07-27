@@ -17,6 +17,15 @@ namespace E_commerce_website.Pages
         public int Count { get; set; }
         [BindProperty]
         public decimal TotalPrice { get; set; }
+        [BindProperty]
+        public decimal Shipping { get; set; }
+        [BindProperty]
+        public decimal TotalBeforeTax { get; set; }
+        [BindProperty]
+        public decimal Tax { get; set; }
+        [BindProperty]
+        public decimal OrderTotal { get; set; }
+
         private readonly ECommerceDBContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
         public CheckoutModel(ECommerceDBContext context, UserManager<ApplicationUser> userManager) 
@@ -45,7 +54,21 @@ namespace E_commerce_website.Pages
 
                 Products = await result.ToListAsync();
                 Count = Products.Count();
+
                 TotalPrice = (decimal)Products.Sum(s => s.ProductSellPrice);
+                TotalPrice = Math.Round(TotalPrice, 2);
+
+                Shipping = TotalPrice * (decimal)0.2;
+                Shipping = Math.Round(Shipping, 2);
+
+                TotalBeforeTax = TotalPrice + Shipping;
+                TotalBeforeTax = Math.Round(TotalBeforeTax, 2);
+
+                Tax = TotalBeforeTax * (decimal)0.07;
+                Tax = Math.Round(Tax, 2);
+
+                OrderTotal = TotalBeforeTax + Tax;
+                OrderTotal = Math.Round(OrderTotal, 2);
             }
 
             return Page();
