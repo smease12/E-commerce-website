@@ -1,4 +1,6 @@
-﻿namespace E_commerce_website.ViewModels
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace E_commerce_website.ViewModels
 {
     public class CartProductVM
     {
@@ -7,7 +9,8 @@
         public string? ProductImg { get; set; }
         public decimal? ProductSellPrice { get; set; }
         public int? ProductQty { get; set; }
-        public DateTime? DeliveryDate { get; set; }
+
+        public string? DeliveryDate { get; set; }
 
     }
 }

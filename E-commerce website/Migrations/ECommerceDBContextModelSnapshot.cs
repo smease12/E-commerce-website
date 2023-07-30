@@ -161,7 +161,7 @@ namespace E_commerce_website.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("E_commerce_website.Models.UserCart", b =>
@@ -193,7 +193,7 @@ namespace E_commerce_website.Migrations
 
                     b.HasIndex("Productid");
 
-                    b.ToTable("UserCarts");
+                    b.ToTable("UserCarts", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

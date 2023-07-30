@@ -48,9 +48,9 @@ namespace E_commerce_website.Pages
                                   ProductName = p.name,
                                   ProductImg = p.imgLocation1,
                                   ProductSellPrice = p.sellPrice,
-                                  ProductQty = u.Quantity
-                              }
-                    );
+                                  ProductQty = u.Quantity,
+                                  DeliveryDate = (u.DateDelivery).Value.ToString("dddd, dd MMMM yyyy")                              }
+                    ) ;
 
                 Products = await result.ToListAsync();
                 Count = Products.Count();
