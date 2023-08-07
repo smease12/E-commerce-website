@@ -29,9 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
         for (i = 0; i < count; i++)
         {
             totalPriceCombined =  totalPriceCombined + parseFloat(hiddenPrices[i].value);
-            console.log(totalPriceCombined);
         }
-        console.log(totalSellPrice.textContent);
+
         totalSellPrice.textContent = "Items $"+totalPriceCombined.toFixed(2);
         
     }

@@ -140,6 +140,7 @@
                 <p>
                     Order Summary
                 </p>
+                <input type="hidden" id="hiddenTotalSellPrice" asp-for="@Model.TotalPrice" />
                 <p id="TotalSellPrice" data-total-before-tax="@Model.TotalPrice">
                     Items: $@Model.TotalPrice
                 </p>
