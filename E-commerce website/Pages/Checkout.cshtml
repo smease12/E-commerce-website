@@ -141,19 +141,23 @@
                     Order Summary
                 </p>
                 <input type="hidden" id="hiddenTotalSellPrice" asp-for="@Model.TotalPrice" />
-                <p id="TotalSellPrice" data-total-before-tax="@Model.TotalPrice">
+                <p id="displayTotalSellPrice" data-total-before-tax="@Model.TotalPrice">
                     Items: $@Model.TotalPrice
                 </p>
-                <p>
+                <input type="hidden" id="hiddenShipping" asp-for="@Model.Shipping" />
+                <p id="displayShipping">
                     Shipping/Handling: $@Model.Shipping
                 </p>
-                <p>
+                <input type="hidden" id="hiddenTotalBeforeTax" asp-for="@Model.TotalBeforeTax" />
+                <p id="displayTotalBeforeTax">
                     Total before tax: $@Model.TotalBeforeTax
                 </p>
-                <p>
+                <input type="hidden" id="hiddenTax" asp-for="@Model.Tax" />
+                <p id="displayTax">
                     Tax: $@Model.Tax
                 </p>
-                <p>
+                <input type="hidden" id="hiddenOrderTotal" asp-for="@Model.OrderTotal" />
+                <p id="displyOrderTotal">
                     Order Total $@Model.OrderTotal
                 </p>
             </div>
