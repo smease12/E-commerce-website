@@ -24,18 +24,46 @@ document.addEventListener('DOMContentLoaded', function () {
         const hiddenPrice = document.getElementById('hiddenPrice_' + productId);
         hiddenPrice.value = totalPrice.toFixed(2);
         
-        //Add together all priceDisplays and update total price before tax and shipping
+        //Add together all priceDisplays before tax and shipping
         let totalPriceCombined = 0.00;
         console.log(totalPriceCombined);
         for (i = 0; i < count; i++)
         {
             totalPriceCombined =  totalPriceCombined + parseFloat(hiddenPrices[i].value);
         }
-        
-        displayTotalSellPrice.textContent = "Items $" + totalPriceCombined.toFixed(2);
 
+        //update display and hidden field of total price before tax and shipping
+        displayTotalSellPrice.textContent = "Items: $" + totalPriceCombined.toFixed(2);
+        const hiddenTotalSellPrice = document.getElementById('hiddenTotalSellPrice');
+        hiddenTotalSellPrice.value = totalPriceCombined.toFixed(2);
 
-        
+        //calculate shipping cost, update hidden and display for shipping value
+        let shipping = (totalPriceCombined * .2).toFixed(2);
+        const hiddenShipping = document.getElementById('hiddenShipping');
+        const displayShipping = document.getElementById('displayShipping');
+        hiddenShipping.value = shipping;
+        displayShipping.textContent = "Shipping/Handling: $" + totalPriceCombined;
+
+        //update total price with shipping for total before tax, update hidden and display for total before tax
+        totalPriceCombined = (totalPriceCombined + shipping).toFixed(2);
+        const hiddenTotalBeforeTax = document.getElementById('hiddenTotalBeforeTax');
+        const displayTotalBeforeTax = document.getElementById('displayTotalBeforeTax');
+        hiddenTotalBeforeTax.value = totalPriceCombined;
+        displayTotalBeforeTax.textContent = "Total Before Tax: $" + totalPriceCombined;
+
+        //calculate tax, update hidden and display for tax
+        let tax = (totalPriceCombined * .07).toFixed(2);
+        const hiddenTax = document.getElementById('hiddenTax');
+        const displayTax = document.getElementById('displayTax');
+        hiddenTax.value = tax;
+        displayTax.textContent = "Tax: $" + tax;
+
+        //update total price with tax for order total, update hidden and display for order total
+        totalPriceCombined = (totalPriceCombined + tax).toFixed(2);
+        const hiddenOrderTotal = document.getElementById('hiddenOrderTotal');
+        const displayOrderTotal = document.getElementById('displayOrderTotal');
+        hiddenOrderTotal.value = totalPriceCombined;
+        displayOrderTotal.textContent = "Order Total $" + totalPriceCombined;
     }
 
     //Attach the "change" event listener to each quantity dropdown
