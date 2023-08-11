@@ -29,15 +29,6 @@ C:\Users\Serena\source\repos\E-commerce website\E-commerce website\obj\Debug\net
 C:\Users\Serena\source\repos\E-commerce website\E-commerce website\obj\Debug\net6.0\E-commerce website.pdb
 C:\Users\Serena\source\repos\E-commerce website\E-commerce website\obj\Debug\net6.0\E-commerce website.genruntimeconfig.cache
 C:\Users\Serena\source\repos\E-commerce website\E-commerce website\obj\Debug\net6.0\ref\E-commerce website.dll
-C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.csproj.AssemblyReference.cache
-C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.AssemblyInfoInputs.cache
-C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.AssemblyInfo.cs
-C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.csproj.CoreCompileInputs.cache
-C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.RazorAssemblyInfo.cache
-C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.RazorAssemblyInfo.cs
 C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\bin\Debug\net6.0\appsettings.json
 C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\bin\Debug\net6.0\E-commerce website.staticwebassets.runtime.json
@@ -310,6 +301,15 @@ C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\bin\Debug\net
 C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.csproj.AssemblyReference.cache
+C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.AssemblyInfoInputs.cache
+C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.AssemblyInfo.cs
+C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.csproj.CoreCompileInputs.cache
+C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.RazorAssemblyInfo.cache
+C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\E-commerce website.RazorAssemblyInfo.cs
 C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\staticwebassets\msbuild.E-commerce website.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\staticwebassets\msbuild.build.E-commerce website.props
 C:\Users\Serena\source\repos\E-commerce-website\E-commerce website\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.E-commerce website.props
