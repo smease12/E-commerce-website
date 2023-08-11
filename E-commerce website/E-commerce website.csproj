@@ -8,10 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\js\cart.js" />
     <Content Remove="wwwroot\js\checkout.js" />
   </ItemGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\js\cart.js" />
     <_ContentIncludedByDefault Remove="wwwroot\js\checkout.js" />
   </ItemGroup>
 
@@ -32,6 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\js\cart.js" />
     <None Include="wwwroot\js\checkout.js" />
   </ItemGroup>
 

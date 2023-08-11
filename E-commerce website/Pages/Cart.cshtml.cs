@@ -38,7 +38,7 @@ namespace E_commerce_website.Pages
                                 ProductId = p.id,
                                 ProductName = p.name,
                                 ProductImg = p.imgLocation1,
-                                ProductSellPrice = p.sellPrice,
+                                ProductSellPrice = p.sellPrice * u.Quantity,
                                 ProductQty = u.Quantity
                             }
                     );
