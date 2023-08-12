@@ -37,7 +37,7 @@
                             <p>@Model.Products[i].ProductName</p>
                             <p>
                                     <input type="hidden" asp-for="@Model.Products[i].ProductQty" id="hiddenProductQuantity_@Model.Products[i].ProductId"/>
-                                    <select  id="quantityDropdown_@Model.Products[i].ProductId">
+                                    <select id="quantityDropdown_@Model.Products[i].ProductId" data-product-id="@Model.Products[i].ProductId" data-product-price="@Model.Products[i].ProductSellPrice">
                                         <option value="1">Qty: 1</option>
                                         <option value="2">Qty: 2</option>
                                         <option value="3">Qty: 3</option>
@@ -51,19 +51,15 @@
                                     </select>
                             </p>
                             </div>
-                            <div class="col-3 m-3" id="priceDisplay_@Model.Products[i].ProductId">@Model.Products[i].ProductSellPrice</div>
+                            <p class="col-3 m-3" id="priceDisplay_@Model.Products[i].ProductId">@Model.Products[i].ProductSellPrice</p>
                 </div>
                 }
                 
             </div>
             <div class="col-3">
-            @if(Model.Count > 1){
-                        <p>Subtotal (@Model.Count items): $@Model.TotalPrice</p>
-                    }
-                    else
-                    {
-                        <p>Subtotal (@Model.Count item): $@Model.TotalPrice</p>
-                    }
+                       
+                        <p id="displaySubtotal">Subtotal (@Model.Count item(s)): $@Model.TotalPrice</p>
+
                     <p>
                         <button type="submit" class="buttons" style="    
                         padding: 10px 30px;
@@ -99,6 +95,7 @@
 @section Scripts
     {
     <script src="~/js/product.js"></script>
+    <script src="~/js/cart.js"></script>
 }
 
 
