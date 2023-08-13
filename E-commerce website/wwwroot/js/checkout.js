@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
     function updatePrice(event) {
         //Find previous total price and count
         const displayTotalSellPrice = document.getElementById('displayTotalSellPrice');
-        const count = document.getElementById('productCount').value;
+        const hiddenProductTypeCount = document.getElementById('hiddenProductTypeCount').value;
+        const hiddenProductCount = document.getElementById('hiddenProductCount');
+
 
         //get selected quantity, productid, and priceperunit from quantity dropdown
         const selectedQuantity = event.target.value;
@@ -24,13 +26,21 @@ document.addEventListener('DOMContentLoaded', function () {
         const hiddenPrice = document.getElementById('hiddenPrice_' + productId);
         hiddenPrice.value = totalPrice.toFixed(2);
         
-        //Add together all priceDisplays before tax and shipping
+        //Add together all priceDisplays and get new total product count
         let totalPriceCombined = 0.00;
-        console.log(totalPriceCombined);
-        for (i = 0; i < count; i++)
-        {
-            totalPriceCombined =  totalPriceCombined + parseFloat(hiddenPrices[i].value);
+        let newProductCount = 0;
+
+        for (i = 0; i < hiddenProductTypeCount; i++) {
+            newProductCount = newProductCount + parseInt(quantityDropdowns[i].value);
+            console.log(newProductCount);
+            totalPriceCombined = totalPriceCombined + parseFloat(hiddenPrices[i].value);
         }
+
+        hiddenProductCount.value = newProductCount;
+
+        //update display and hidden field of total price before tax and shipping
+        const displayCheckoutCount = document.getElementById('displayCheckoutCount');
+        displayCheckoutCount.textContent = "Checkout (" + hiddenProductCount.value + " Items)";
 
         //update display and hidden field of total price before tax and shipping
         displayTotalSellPrice.textContent = "Items: $" + totalPriceCombined.toFixed(2);
