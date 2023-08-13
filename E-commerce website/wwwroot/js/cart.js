@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function updatePrice(event) {
         //Find previous total price and count
         const displaySubtotal = document.getElementById('displaySubtotal');
-        const count = document.getElementById('productCount').value;
+        const productTypeCount = document.getElementById('hiddenProductTypeCount').value;
+        const productCount = document.getElementById('hiddenProductCount');
 
         //get selected quantity, productid, and priceperunit from quantity dropdown
         const selectedQuantity = event.target.value;
@@ -24,15 +25,24 @@ document.addEventListener('DOMContentLoaded', function () {
         const hiddenPrice = document.getElementById('hiddenPrice_' + productId);
         hiddenPrice.value = totalPrice.toFixed(2);
 
-        //Add together all priceDisplays before tax and shipping
+        //Add together all priceDisplays and get new total product count
         let totalPriceCombined = 0.00;
-        console.log(totalPriceCombined);
-        for (i = 0; i < count; i++) {
+        let newProductCount = 0;
+        
+        for (i = 0; i < productTypeCount; i++) {
+            newProductCount = newProductCount + parseInt(quantityDropdowns[i].value);
+            console.log(newProductCount);
             totalPriceCombined = totalPriceCombined + parseFloat(hiddenPrices[i].value);
         }
 
+        productCount.value = newProductCount;
+
         //update display and hidden field of total price before tax and shipping
-        displaySubtotal.textContent = "Items: $" + totalPriceCombined.toFixed(2);
+        displaySubtotal.textContent = "Subtotal(" + productCount.value + " Items): $" + totalPriceCombined.toFixed(2);
+        const displaySubtotal2 = document.getElementById('displaySubtotal2');
+        displaySubtotal2.textContent = "Subtotal(" + productCount.value + " Items): $" + totalPriceCombined.toFixed(2);
+
+
         const hiddenTotalSellPrice = document.getElementById('hiddenTotalPrice');
         hiddenTotalSellPrice.value = totalPriceCombined.toFixed(2);
 
