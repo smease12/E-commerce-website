@@ -14,7 +14,9 @@ namespace E_commerce_website.Pages
         [BindProperty]
         public List<CartProductVM> Products { get; set; }
         [BindProperty]
-        public int Count { get; set; }
+        public int ProductTypeCount { get; set; }
+        [BindProperty]
+        public int ProductCount { get; set; }
         [BindProperty]
         public decimal TotalPrice { get; set; }
         [BindProperty]
@@ -47,13 +49,14 @@ namespace E_commerce_website.Pages
                                   ProductId = p.id,
                                   ProductName = p.name,
                                   ProductImg = p.imgLocation1,
-                                  ProductSellPrice = p.sellPrice * u.Quantity,
+                                  ProductSellPrice = decimal.Round((decimal)(p.sellPrice * u.Quantity), 2),
                                   ProductQty = u.Quantity,
                                   DeliveryDate = (u.DateDelivery).Value.ToString("dddd, dd MMMM yyyy")                              }
                     ) ;
 
                 Products = await result.ToListAsync();
-                Count = Products.Count();
+                ProductTypeCount = Products.Count();
+                ProductCount = (int)Products.Sum(s => s.ProductQty);
 
                 TotalPrice = (decimal)Products.Sum(s => s.ProductSellPrice);
                 TotalPrice = Math.Round(TotalPrice, 2);
