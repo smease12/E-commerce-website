@@ -23,18 +23,11 @@
 
 
     <div style="width: 100%">
-        @if (Model.Count > 1)
-        {
+
             <row class="border-bottom">
-                <h2 class="product-brand">Checkout (@Model.Count Items)</h2>
+                <h2 id="displayCheckoutCount" class="product-brand">Checkout (@Model.ProductCount Items)</h2>
             </row>
-        }
-        else
-        {
-            <row class="border-bottom">
-                <h2 class="product-brand">Checkout (@Model.Count Item)</h2>
-            </row>
-        }
+
 
         <form method="post" class="row">
             <div class="col-9 text-center align-items-center">
@@ -91,7 +84,8 @@
                 <div class="row">
                     <div class="col-1 m-3"></div>
                     <div class="col-8 p-2 m-3 border">
-                        <input type="hidden" asp-for="@Model.Count" id="productCount"/>
+                        <input type="hidden" asp-for="@Model.ProductCount" id="hiddenProductCount"/>
+                        <input type="hidden" asp-for="@Model.ProductTypeCount" id="hiddenProductTypeCount"/>
                         @for (int i = 0; i < Model.Products.Count; i++)
                         {
                             <div class="row m-2">
