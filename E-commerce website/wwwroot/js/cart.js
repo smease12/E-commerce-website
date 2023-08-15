@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    //Get references to all quantity dropdowns hidden price inputs
+    //Get references to all quantity dropdowns hidden price inputs, and hidden qty inputs
     const quantityDropdowns = document.querySelectorAll('[id^="quantityDropdown_"]');
     const hiddenPrices = document.querySelectorAll('[id^="hiddenPrice_"]');
 
@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const selectedQuantity = event.target.value;
         const productId = event.target.dataset.productId;
         const pricePerUnit = parseFloat(event.target.dataset.productPrice);
+
+        //update hidden quantity input
+        const hiddenQty = document.getElementById('hiddenQty_' + productId);
+        hiddenQty.value = selectedQuantity;
+
+
         //Calculate the total price based on the quantity and price per unit
         const totalPrice = selectedQuantity * pricePerUnit;
 

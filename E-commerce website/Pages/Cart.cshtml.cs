@@ -54,9 +54,9 @@ namespace E_commerce_website.Pages
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+        public async Task<IActionResult> OnPostAsync()
         {
-            returnUrl ??= Url.Content("~/Checkout");
+            string returnUrl = Url.Content("~/Checkout");
             var postedValues = Products;
             Products = new List<CartProductVM>(postedValues);
             return LocalRedirect(returnUrl);
