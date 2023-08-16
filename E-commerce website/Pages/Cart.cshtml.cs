@@ -38,6 +38,7 @@ namespace E_commerce_website.Pages
                             select new CartProductVM 
                             {
                                 ProductId = p.id,
+                                UserCartId = u.Id,
                                 ProductName = p.name,
                                 ProductImg = p.imgLocation1,
                                 ProductSellPrice = decimal.Round((decimal)(p.sellPrice * u.Quantity), 2),
@@ -59,6 +60,15 @@ namespace E_commerce_website.Pages
             string returnUrl = Url.Content("~/Checkout");
             var postedValues = Products;
             Products = new List<CartProductVM>(postedValues);
+
+            //update quantity in user cart
+            foreach(var product in Products)
+            {
+                UserCart userCart = _context.UserCarts.FirstOrDefault(c => c.Id == product.UserCartId);
+                userCart.Quantity = product.ProductQty;
+                _context.SaveChanges();
+            }
+
             return LocalRedirect(returnUrl);
 
         }
