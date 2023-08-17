@@ -56,7 +56,7 @@ namespace E_commerce_website.Pages
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostCheckoutAsync()
         {
             string returnUrl = Url.Content("~/Checkout");
             var postedValues = Products;
@@ -72,6 +72,12 @@ namespace E_commerce_website.Pages
 
             return LocalRedirect(returnUrl);
 
+        }
+
+        public async Task<IActionResult> OnPostDeleteAsync(int productId) 
+        {
+            int test = productId;
+            return Page();
         }
     }
 }

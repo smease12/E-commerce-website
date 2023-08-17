@@ -53,7 +53,17 @@
                                         <option value="10">Qty: 10</option>
                                     </select>
                                     |
-                                    <a href="#" style="color:black">Delete</a>
+                                    <button data-product-id="@Model.Products[i].ProductId"
+                                    asp-page-handler="Delete"
+                                    style="background: none;
+                                                    border: none;
+                                                    padding: 0;
+                                                    margin: 0;
+                                                    cursor: pointer;
+                                                    color: black; 
+                                                    text-decoration: underline;" >
+                                        Delete
+                                    </button>
                             </p>
                             </div>
                             <p class="col-3 m-3" id="priceDisplay_@Model.Products[i].ProductId">$@Model.Products[i].OrderSellPrice</p>
@@ -66,7 +76,7 @@
                         <p id="displaySubtotal">Subtotal (@Model.ProductCount item(s)): $@Model.TotalPrice</p>
 
                     <p>
-                        <button type="submit" class="buttons" style="    
+                        <button type="submit" asp-page-handler="Checkout" class="buttons" style="    
                         padding: 10px 30px;
                         text-transform: capitalize;
                         color: #fff;
