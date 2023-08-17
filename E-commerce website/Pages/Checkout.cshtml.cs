@@ -49,7 +49,8 @@ namespace E_commerce_website.Pages
                                   ProductId = p.id,
                                   ProductName = p.name,
                                   ProductImg = p.imgLocation1,
-                                  ProductSellPrice = decimal.Round((decimal)(p.sellPrice * u.Quantity), 2),
+                                  ProductSellPrice = p.sellPrice,
+                                  OrderSellPrice = decimal.Round((decimal)(p.sellPrice * u.Quantity), 2),
                                   ProductQty = u.Quantity,
                                   DeliveryDate = (u.DateDelivery).Value.ToString("dddd, dd MMMM yyyy")                              }
                     ) ;
@@ -58,7 +59,7 @@ namespace E_commerce_website.Pages
                 ProductTypeCount = Products.Count();
                 ProductCount = (int)Products.Sum(s => s.ProductQty);
 
-                TotalPrice = (decimal)Products.Sum(s => s.ProductSellPrice);
+                TotalPrice = (decimal)Products.Sum(s => s.OrderSellPrice);
                 TotalPrice = Math.Round(TotalPrice, 2);
 
                 Shipping = TotalPrice * (decimal)0.2;
