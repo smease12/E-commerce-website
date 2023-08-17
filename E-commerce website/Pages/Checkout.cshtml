@@ -96,7 +96,7 @@
                                 <div class="col-6">
                                     <input type="hidden" asp-for="@Model.Products[i].ProductSellPrice" id="hiddenPrice_@Model.Products[i].ProductId" />
                                     <p style="margin:30px 0 10px;">@Model.Products[i].ProductName</p>
-                                    <p  id="priceDisplay_@Model.Products[i].ProductId"> $@Model.Products[i].ProductSellPrice</p>
+                                    <p  id="priceDisplay_@Model.Products[i].ProductId"> $@Model.Products[i].OrderSellPrice</p>
                                     <select asp-for="@Model.Products[i].ProductQty" name="quantityDropdown_@Model.Products[i].ProductId" id="quantityDropdown_@Model.Products[i].ProductId" data-product-id="@Model.Products[i].ProductId" data-product-price="@Model.Products[i].ProductSellPrice">
                                         <option value="1">Qty: 1</option>
                                         <option value="2">Qty: 2</option>
