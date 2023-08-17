@@ -41,7 +41,8 @@ namespace E_commerce_website.Pages
                                 UserCartId = u.Id,
                                 ProductName = p.name,
                                 ProductImg = p.imgLocation1,
-                                ProductSellPrice = decimal.Round((decimal)(p.sellPrice * u.Quantity), 2),
+                                ProductSellPrice = p.sellPrice,
+                                OrderSellPrice = decimal.Round((decimal)(p.sellPrice * u.Quantity), 2),
                                 ProductQty = u.Quantity
                             }
                     );
