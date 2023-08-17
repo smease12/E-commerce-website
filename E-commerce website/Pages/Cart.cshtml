@@ -28,6 +28,7 @@
                         <input type="hidden" asp-for="@Model.Products[i].ProductSellPrice" id="hiddenPrice_@Model.Products[i].ProductId" />
                         <input type="hidden" asp-for="@Model.Products[i].ProductQty" id="hiddenQty_@Model.Products[i].ProductId" />
                         <input type="hidden" asp-for="@Model.Products[i].UserCartId" />
+                        <input type="hidden" asp-for="@Model.Products[i].OrderSellPrice" />
                  <div class="row border border-dark align-items-center">
                     <div class="col-1 m-3">
                         <input type="checkbox" class="checkbox" id="selected">
@@ -53,7 +54,7 @@
                                     </select>
                             </p>
                             </div>
-                            <p class="col-3 m-3" id="priceDisplay_@Model.Products[i].ProductId">@Model.Products[i].ProductSellPrice</p>
+                            <p class="col-3 m-3" id="priceDisplay_@Model.Products[i].ProductId">$@Model.Products[i].OrderSellPrice</p>
                 </div>
                 }
                 
