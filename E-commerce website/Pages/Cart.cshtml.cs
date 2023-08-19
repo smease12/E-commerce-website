@@ -74,10 +74,11 @@ namespace E_commerce_website.Pages
 
         }
 
-        public async Task<IActionResult> OnPostDeleteAsync(int productId) 
+        public IActionResult OnPostDelete(int productId) 
         {
             int test = productId;
-            return Page();
+
+            return new JsonResult(new { success = true });
         }
     }
 }
