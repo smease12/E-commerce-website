@@ -16,7 +16,7 @@
 
         <p class="product-sub-heading">Products</p>
 
-        <form method="post" class="row text-center align-items-center ">
+        <form method="post" id="productListForm" class="row text-center align-items-center ">
         <input type="hidden" asp-for="ProductTypeCount" id="hiddenProductTypeCount"/>
         <input type="hidden" asp-for="ProductCount" id="hiddenProductCount" />
         <input type="hidden" asp-for="TotalPrice" id="hiddenTotalPrice"/>
@@ -54,7 +54,7 @@
                                     </select>
                                     |
                                     <button data-product-id="@Model.Products[i].ProductId"
-                                    asp-page-handler="Delete"
+                                    class="delete-button"
                                     style="background: none;
                                                     border: none;
                                                     padding: 0;

@@ -3,6 +3,28 @@ document.addEventListener('DOMContentLoaded', function () {
     const quantityDropdowns = document.querySelectorAll('[id^="quantityDropdown_"]');
     const hiddenPrices = document.querySelectorAll('[id^="hiddenPrice_"]');
 
+    const deleteButtons = document.querySelectorAll('.delete-button');
+    const form = document.getElementById('productListForm');
+
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const productId = button.getAttribute('data-product-id');
+            deleteProduct(productId);
+        });
+    });
+
+    async function deleteProduct(productId) {
+        const response = await fetch(`/Cart?handler=Delete&productId=${productId}`, {
+            method: "POST",
+            headers: {
+                'X-Requested-Width': 'XMLHttpRequest', //to identify AJAX request
+                'RequestVerificationToken': 'Html.AntiforgeryToken()' //Add anti-forgery token
+            }
+        });
+    }
+
     //Define a function to update the price based on the selected quantity
     function updatePrice(event) {
         //Find previous total price and count
