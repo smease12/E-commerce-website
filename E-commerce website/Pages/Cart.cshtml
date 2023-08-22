@@ -8,13 +8,19 @@
     @*<link href="@Url.Content("~/css/form.css")" rel="stylesheet" type="text/css"/>*@
 }
         @{
-           
-<section class="product-details">
-    <div class="details" style="width: 100%">
-        <h2 class="product-brand">Shopping Cart</h2>
-        <a href="#">Deselect all items</a>
 
-        <p class="product-sub-heading">Products</p>
+    <section class="product-details">
+        <div class="details" style="width: 100%">
+            <h2 class="product-brand">Shopping Cart</h2>
+           @* <a href="#">Deselect all items</a>*@
+            @if (Model.ProductCount > 0)
+            {
+                <p class="product-sub-heading">Products</p>
+            }
+            else
+            {
+                <p class="product-sub-heading">Shopping cart is currently empty.</p>
+            }
 
         <form method="post" id="productListForm" class="row text-center align-items-center ">
                 @Html.AntiForgeryToken()
@@ -75,9 +81,10 @@
             <div class="col-3">
                        
                         <p id="displaySubtotal">Subtotal (@Model.ProductCount item(s)): $@Model.TotalPrice</p>
-
-                    <p>
-                        <button type="submit" asp-page-handler="Checkout" class="buttons" style="    
+                    @if (Model.ProductCount > 0)
+                    {
+                        <p>
+                            <button type="submit" asp-page-handler="Checkout" class="buttons" style="    
                         padding: 10px 30px;
                         text-transform: capitalize;
                         color: #fff;
@@ -87,10 +94,11 @@
                          outline: none;
                          margin-right: 10px;
                             cursor: pointer;">
-                            Proceed to Checkout
-                        </button>
-                    </p>
-            </div>
+                                Proceed to Checkout
+                            </button>
+                        </p>
+                    }
+                </div>
             
         </form>
         
