@@ -25,16 +25,27 @@ document.addEventListener('DOMContentLoaded', function () {
                     'RequestVerificationToken': token //Include the token in the headers
                 }
             });
-            const responseData = await response.text(); //get the response as text
-            console.log(response);
-            if (responseData) {
-                console.log(responseData);
-                const parsedData = JSON.parse(responseData);
-                console.log(parsedData);
+
+            if (response.ok) {
+                //Delete was successful, refresh the page
+                window.location.reload();
             }
             else {
-                console.log('Empty or unexpected response');
+                //Handle error
+                console.error('Failed to delete product');
             }
+
+            //debugging response
+          //  const responseData = await response.text(); //get the response as text
+          ////  console.log(response);
+          //  if (responseData) {
+          //      console.log(responseData);
+          //      const parsedData = JSON.parse(responseData);
+          //     // console.log(parsedData);
+          //  }
+          //  else {
+          //      console.log('Empty or unexpected response');
+          //  }
         }
         catch (error) {
             console.error(error);
