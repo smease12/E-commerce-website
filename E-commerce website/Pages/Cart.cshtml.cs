@@ -50,7 +50,7 @@ namespace E_commerce_website.Pages
                 Products = await result.ToListAsync();
                 ProductTypeCount = Products.Count();
                 ProductCount = (int)Products.Sum(s => s.ProductQty);
-                TotalPrice = Math.Round((decimal)(Products.Sum(s=> s.ProductSellPrice)), 2);
+                TotalPrice = Math.Round((decimal)(Products.Sum(s=> s.OrderSellPrice)), 2);
             }
             
             return Page();

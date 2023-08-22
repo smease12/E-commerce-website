@@ -17,6 +17,7 @@
         <p class="product-sub-heading">Products</p>
 
         <form method="post" id="productListForm" class="row text-center align-items-center ">
+                @Html.AntiForgeryToken()
         <input type="hidden" asp-for="ProductTypeCount" id="hiddenProductTypeCount"/>
         <input type="hidden" asp-for="ProductCount" id="hiddenProductCount" />
         <input type="hidden" asp-for="TotalPrice" id="hiddenTotalPrice"/>
