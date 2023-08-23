@@ -36,6 +36,8 @@ namespace E_commerce_website.Pages
             userCart.Product = 
                 await _context.Products.FirstOrDefaultAsync(p => p.id == Product.id);
             userCart.ApplicationUser = user;
+            userCart.Quantity = 1;
+            userCart.DateDelivery = (DateTime.Today).AddDays(3);
 
             _context.Add(userCart);
             await _context.SaveChangesAsync();
