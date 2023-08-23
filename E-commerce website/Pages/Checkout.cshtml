@@ -21,7 +21,14 @@
 
 <body>
 
-
+    @if(Model.ProductCount <= 0)
+    {
+        //redirect to cart if no products
+        <script>
+            window.location.href = '@Url.Page("Cart")';
+        </script>
+    }
+    else{
     <div style="width: 100%">
 
             <row class="border-bottom">
@@ -172,7 +179,7 @@
         </form>
 
     </div>
-
+    }
     
 </body>
 
