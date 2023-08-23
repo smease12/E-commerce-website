@@ -77,5 +77,17 @@ namespace E_commerce_website.Pages
 
             return Page();
         }
+
+        public IActionResult OnPostDelete(int productId)
+        {
+            UserCart toDelete = _context.UserCarts.FirstOrDefault(u => u.Id == productId);
+            if (toDelete != null)
+            {
+                _context.Remove(toDelete);
+                _context.SaveChanges();
+            }
+
+            return new JsonResult(new { success = true });
+        }
     }
 }

@@ -30,6 +30,7 @@
 
 
         <form method="post" class="row">
+            @Html.AntiForgeryToken()
             <div class="col-9 text-center align-items-center">
                 <div class="row">
                     <div class="col-1 m-3">
@@ -109,6 +110,18 @@
                                         <option value="9">Qty: 9</option>
                                         <option value="10">Qty: 10</option>
                                     </select>
+                                    |
+                                    <button data-product-id="@Model.Products[i].UserCartId"
+                                            class="delete-button"
+                                            style="background: none;
+                                                    border: none;
+                                                    padding: 0;
+                                                    margin: 0;
+                                                    cursor: pointer;
+                                                    color: black;
+                                                    text-decoration: underline;">
+                                        Delete
+                                    </button>
                                 </div>
                             </div>
 
