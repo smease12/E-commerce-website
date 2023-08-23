@@ -53,6 +53,7 @@ namespace E_commerce_website.Pages
                 TotalPrice = Math.Round((decimal)(Products.Sum(s=> s.OrderSellPrice)), 2);
             }
             
+            
             return Page();
         }
 
