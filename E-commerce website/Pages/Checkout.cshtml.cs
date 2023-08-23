@@ -52,7 +52,9 @@ namespace E_commerce_website.Pages
                                   ProductSellPrice = p.sellPrice,
                                   OrderSellPrice = decimal.Round((decimal)(p.sellPrice * u.Quantity), 2),
                                   ProductQty = u.Quantity,
-                                  DeliveryDate = (u.DateDelivery).Value.ToString("dddd, dd MMMM yyyy")                              }
+                                  DeliveryDate = (u.DateDelivery).Value.ToString("dddd, dd MMMM yyyy"),
+                                  UserCartId = u.Id      
+                              }
                     ) ;
 
                 Products = await result.ToListAsync();

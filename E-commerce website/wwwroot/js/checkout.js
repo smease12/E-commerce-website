@@ -3,6 +3,55 @@ document.addEventListener('DOMContentLoaded', function () {
     const quantityDropdowns = document.querySelectorAll('[id^="quantityDropdown_"]');
     const hiddenPrices = document.querySelectorAll('[id^="hiddenPrice_"]');
 
+    const deleteButtons = document.querySelectorAll('.delete-button');
+    const form = document.getElementById('productListForm');
+
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const productId = button.getAttribute('data-product-id');
+            deleteProduct(productId);
+        });
+    });
+
+    async function deleteProduct(productId) {
+        const token = $(`input[name='__RequestVerificationToken']`).val(); //Get the token in the value
+        try {
+            const response = await fetch(`/Checkout?handler=Delete&productId=${productId}`, {
+                method: "POST",
+                headers: {
+                    'X-Requested-Width': 'XMLHttpRequest', //to identify AJAX request
+                    'RequestVerificationToken': token //Include the token in the headers
+                }
+            });
+
+            if (response.ok) {
+                //Delete was successful, refresh the page
+                window.location.reload();
+            }
+            else {
+                //Handle error
+                console.error('Failed to delete product');
+            }
+
+            //debugging response
+            //  const responseData = await response.text(); //get the response as text
+            ////  console.log(response);
+            //  if (responseData) {
+            //      console.log(responseData);
+            //      const parsedData = JSON.parse(responseData);
+            //     // console.log(parsedData);
+            //  }
+            //  else {
+            //      console.log('Empty or unexpected response');
+            //  }
+        }
+        catch (error) {
+            console.error(error);
+        }
+    }
+
     //Define a function to update the price based on the selected quantity
     function updatePrice(event) {
         //Find previous total price and count
