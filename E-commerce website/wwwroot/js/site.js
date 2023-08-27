@@ -3,7 +3,9 @@
 
 // Write your JavaScript code.
 
-document.getElementById('btnSearch').addEventListener('click', function () {
+document.addEventListener('DOMContentLoaded', function () { 
+
+    document.getElementById('btnSearch').addEventListener('click', function () {
     const inputElement = document.getElementById('inputSearch');
     const inputValue = inputElement.value;
 
@@ -12,5 +14,7 @@ document.getElementById('btnSearch').addEventListener('click', function () {
 
         window.location.href = url;
     }
+
+});
 
 });
