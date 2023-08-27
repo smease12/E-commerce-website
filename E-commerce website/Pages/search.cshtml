@@ -9,8 +9,27 @@
 
 <section class="search-results">
     <h2 class="heading">search results for <span>@Model.searchKeyword</span></h2>
-
     <div class="product-container">
+    @for (int i = 0; i < Model.Products.Count; i++)
+    {
+        
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">@Model.Products[i].discount% off</span>
+                    <img src="~/uploads/@Model.Products[i].imgLocation1" />
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">@Model.Products[i].name</h2>
+                    <p class="product-short-des">@Model.Products[i].descriptionShort</p>
+                    <span class="price">$@Model.Products[i].sellPrice</span>
+                    <span class="actual-price">$@Model.Products[i].fullPrice</span>
+                </div>
+            </div>
+        
+    }
+    </div>
+@*    <div class="product-container">
         <div class="product-card">
             <div class="product-image">
                 <span class="discount-tag">50% off</span>
@@ -23,6 +42,8 @@
                 <span class="price">$20</span><span class="actual-price">$40</span>
             </div>
         </div>
+        
+
         <div class="product-card">
             <div class="product-image">
                 <span class="discount-tag">50% off</span>
@@ -73,14 +94,14 @@
         </div>
         <div class="product-card">
             <div class="product-image">
-                <@*span class="discount-tag">50% off</span>*@
+                <@*span class="discount-tag">50% off</span>
                 <img src="gift wrapping.png" class="product-thumb" alt="">
                 <button class="card-btn">add to wishlist</button>
             </div>
             <div class="product-info">
                 <h2 class="product-brand">Gift Wrapping</h2>
                 <p class="product-short-des">free gift wrapping</p>
-                @*                <span class="price">$20</span><span class="actual-price">$40</span>*@
+                @*                <span class="price">$20</span><span class="actual-price">$40</span>
             </div>
         </div>
         <div class="product-card">
@@ -107,7 +128,7 @@
                 <span class="price">$20</span><span class="actual-price">$40</span>
             </div>
         </div>
-    </div>
+    </div>*@
 </section>
 
 
