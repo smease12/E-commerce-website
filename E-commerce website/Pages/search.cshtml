@@ -22,12 +22,14 @@
                 <div class="product-image">
                     <span class="discount-tag">@Model.Products[i].discount% off</span>
                     <a asp-page="/Product" asp-route-productId=@Model.Products[i].id>
-                    <img class="product-thumb" src="~/uploads/@Model.Products[i].imgLocation1" />
+                        <img class="product-thumb" src="~/uploads/@Model.Products[i].imgLocation1" />
                     </a>
                     <button class="card-btn">add to wishlist</button>
                 </div>
                 <div class="product-info">
-                    <h2 class="product-brand">@Model.Products[i].name</h2>
+                    <a class="product-brand" asp-page="/Product" asp-route-productId=@Model.Products[i].id>
+                         <h2 class="product-brand">@Model.Products[i].name</h2>
+                    </a>
                     <p class="product-short-des">@Model.Products[i].descriptionShort</p>
                     <span class="price">$@Model.Products[i].sellPrice</span>
                     <span class="actual-price">$@Model.Products[i].fullPrice</span>
