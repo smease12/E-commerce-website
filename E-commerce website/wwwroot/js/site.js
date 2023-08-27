@@ -3,18 +3,30 @@
 
 // Write your JavaScript code.
 
-document.addEventListener('DOMContentLoaded', function () { 
+document.addEventListener('DOMContentLoaded', function () {
+    const searchInput = document.getElementById('inputSearch');
+    const searchButton = document.getElementById('btnSearch');
 
-    document.getElementById('btnSearch').addEventListener('click', function () {
-    const inputElement = document.getElementById('inputSearch');
-    const inputValue = inputElement.value;
+    searchInput.addEventListener('keydown', function (event) {
+        //check if the pressed key is Enter (key code 13)
+        if (event.key == 'Enter') {
+            //Prevent the default form submission behavior
+            event.preventDefault();
 
-    if (inputValue) {
-        const url = `/search?keyword=${encodeURIComponent(inputValue)}`;
+            //check if the search input has text
+            if (searchInput.value.trim() !== '') {
+                //trigger a click event on the search button
+                searchButton.click();
+            }
+        }
+    });
 
-        window.location.href = url;
-    }
-
-});
+    searchButton.addEventListener('click', function () {
+        const inputValue = searchInput.value; 
+        if (inputValue) {
+            const url = `/search?keyword=${encodeURIComponent(inputValue)}`;
+            window.location.href = url;
+        }
+    });
 
 });
