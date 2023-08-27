@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (event.key == 'Enter') {
             //Prevent the default form submission behavior
             event.preventDefault();
-
+            console.log("keydown event input value: " + searchInput.value);
             //check if the search input has text
             if (searchInput.value.trim() !== '') {
                 //trigger a click event on the search button
@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     searchButton.addEventListener('click', function () {
         const inputValue = searchInput.value; 
+        console.log("click event search input value: " + inputValue);
         if (inputValue) {
             const url = `/search?keyword=${encodeURIComponent(inputValue)}`;
             window.location.href = url;
