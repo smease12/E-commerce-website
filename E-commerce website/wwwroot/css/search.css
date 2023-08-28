@@ -22,4 +22,16 @@
     grid-row-gap: 40px;
 }
 
+/*Remove blue color and underline from anchor elements*/
+a{
+    color: inherit; /*This sets the color to the same color as its parent*/
+    text-decoration: none;
+}
+
+/*Add a:hover styles to change link appearance on hover*/
+a:hover{
+    /*Define the styles you want when hovering over the link*/
+    text-decoration: underline; 
+    color: inherit;
+}
 
