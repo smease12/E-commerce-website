@@ -153,10 +153,10 @@ input::-webkit-inner-spin-button {
 
 /*Notification banner styles*/
 #notification-banner {
-    background-color: black;
+    background-color: #a9a9a9;
     color: white;
     padding: 10px;
-    text-align:center;
+    text-align: center;
 }
 
 /*Notification message styles*/
