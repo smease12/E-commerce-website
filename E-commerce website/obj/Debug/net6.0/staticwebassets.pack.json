@@ -425,6 +425,10 @@
       "PackagePath": "staticwebassets\\uploads\\candles.jpg"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\chair.png",
+      "PackagePath": "staticwebassets\\uploads\\chair.png"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\daily exercise.webp",
       "PackagePath": "staticwebassets\\uploads\\daily exercise.webp"
     },
