@@ -150,3 +150,16 @@ input::-webkit-inner-spin-button {
 #save-btn {
     background: #a9a9a9;
 }
+
+/*Notification banner styles*/
+#notification-banner {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align:center;
+}
+
+/*Notification message styles*/
+#notification-message{
+    margin: 0;
+}
