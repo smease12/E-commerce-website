@@ -84,6 +84,19 @@
         @*</div>*@
     </form>
 
+    @if (Model.IsAddProductSuccessful)
+    {
+        <script>
+            var isOperationSuccessful = true;
+        </script>
+    }
+    else
+    {
+        <script>
+            var isOperationSuccessful = false;
+        </script>
+    }
+
 </body>
 
 <script src="js/addproduct.js"></script>

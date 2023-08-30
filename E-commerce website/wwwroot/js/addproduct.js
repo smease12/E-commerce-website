@@ -42,3 +42,9 @@ uploadImages.forEach((fileupload, index) => {
     })
 })
 
+if (isOperationSuccessful)
+{
+    var successBanner = document.getElementById('notification-banner');
+    successBanner.style.display = 'block';
+}
+
