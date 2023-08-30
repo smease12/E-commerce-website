@@ -42,9 +42,29 @@ uploadImages.forEach((fileupload, index) => {
     })
 })
 
+//function to clear all textboxes in the form
+function clearTextboxes()
+{
+    var textboxes = document.querySelectorAll('input[type="text"]');
+    var numTextBoxes = document.querySelectorAll('input[type="number"]');
+    var desTextArea = document.getElementById("des");
+    var tagsTextArea = document.getElementById("tags");
+
+    desTextArea.value = '';
+    tagsTextArea.value = '';
+    textboxes.forEach(function (textbox) {
+        textbox.value = '';
+    });
+    numTextBoxes.forEach(function (textarea) {
+        textarea.value = '';
+    });
+}
+
+
 if (isOperationSuccessful)
 {
     var successBanner = document.getElementById('notification-banner');
     successBanner.style.display = 'block';
+    clearTextboxes();
 }
 
