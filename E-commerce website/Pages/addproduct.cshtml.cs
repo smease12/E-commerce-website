@@ -21,6 +21,7 @@ namespace E_commerce_website.Pages
         public IFormFile? Img4 { get; set; }
         [BindProperty]
         public bool IsAddProductSuccessful { get; set; }
+        public string InsertedProductName { get; set; }
 
         public addproductModel(ECommerceDBContext context, Microsoft.AspNetCore.Hosting.IHostingEnvironment environment) 
         {
@@ -77,6 +78,7 @@ namespace E_commerce_website.Pages
                 await _dbContext.SaveChangesAsync();
                 //return RedirectToPage("/");
                 IsAddProductSuccessful = true;
+                InsertedProductName = emptyProduct.name;
                 return Page();
             }
 

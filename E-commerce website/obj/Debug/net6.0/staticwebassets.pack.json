@@ -405,6 +405,10 @@
       "PackagePath": "staticwebassets\\uploads\\Dog.jpg"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\Jewelry.png",
+      "PackagePath": "staticwebassets\\uploads\\Jewelry.png"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\beeswax candle1.jpg",
       "PackagePath": "staticwebassets\\uploads\\beeswax candle1.jpg"
     },
@@ -433,8 +437,24 @@
       "PackagePath": "staticwebassets\\uploads\\daily exercise.webp"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\earrings grid.jpg",
+      "PackagePath": "staticwebassets\\uploads\\earrings grid.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\furniture grid.jpg",
+      "PackagePath": "staticwebassets\\uploads\\furniture grid.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\furniture.png",
+      "PackagePath": "staticwebassets\\uploads\\furniture.png"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\home office 4.jpg",
       "PackagePath": "staticwebassets\\uploads\\home office 4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\necklace.jpg",
+      "PackagePath": "staticwebassets\\uploads\\necklace.jpg"
     },
     {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\pexels-alina-vilchenko-11434947.jpg",
@@ -457,6 +477,14 @@
       "PackagePath": "staticwebassets\\uploads\\pexels-yan-krukau-7233959.jpg"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\uploadshome office.webp",
+      "PackagePath": "staticwebassets\\uploads\\uploadshome office.webp"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\wooden laptop accessories.jpg",
+      "PackagePath": "staticwebassets\\uploads\\wooden laptop accessories.jpg"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploadsgreece-beaches-serifos.jpeg",
       "PackagePath": "staticwebassets\\uploadsgreece-beaches-serifos.jpeg"
     },
@@ -467,6 +495,10 @@
     {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\user.png",
       "PackagePath": "staticwebassets\\user.png"
+    },
+    {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\wooden laptop accessories.jpg",
+      "PackagePath": "staticwebassets\\wooden laptop accessories.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.E-commerce website.Microsoft.AspNetCore.StaticWebAssets.props",
