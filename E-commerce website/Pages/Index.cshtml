@@ -18,7 +18,23 @@
     <button class="nxt-btn"><img src="arrow.png" alt=""></button>
 
     <div class="product-container">
-        <div class="product-card">
+        @for(int i=0; i<Model.FeaturedProducts.Count; i++)
+        {
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">@Model.FeaturedProducts[i].discount % off</span>
+                    <img src="@Model.FeaturedProducts[i].imgLocation1" alt="">
+                    <button class="card-btn">add to wishlist</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">@Model.FeaturedProducts[i].name</h2>
+                    <p class="product-short-des">@Model.FeaturedProducts[i].descriptionShort</p>
+                    <span class="price">$@Model.FeaturedProducts[i].sellPrice</span>
+                    <span class="actual-price">$@Model.FeaturedProducts[i].fullPrice</span>
+                </div>
+            </div>
+        }
+@*        <div class="product-card">
             <div class="product-image">
                 <span class="discount-tag">50% off</span>
                 <img src="candle.png" class="product-thumb" alt="">
@@ -80,14 +96,14 @@
         </div>
         <div class="product-card">
             <div class="product-image">
-                <@*span class="discount-tag">50% off</span>*@
+                <@*span class="discount-tag">50% off</span>
                 <img src="gift wrapping.png" class="product-thumb" alt="">
                 <button class="card-btn">add to wishlist</button>
             </div>
             <div class="product-info">
                 <h2 class="product-brand">Gift Wrapping</h2>
                 <p class="product-short-des">free gift wrapping</p>
-@*                <span class="price">$20</span><span class="actual-price">$40</span>*@
+@*                <span class="price">$20</span><span class="actual-price">$40</span>
             </div>
         </div>
         <div class="product-card">
@@ -113,8 +129,11 @@
                 <p class="product-short-des">necklaces on sale</p>
                 <span class="price">$20</span><span class="actual-price">$40</span>
             </div>
-        </div>
+        </div>*@
     </div>
+
+
+
 </section>
 <section class="collection-container">
     <a asp-page="search" asp-route-keyword="candle" class="collection">
