@@ -135,4 +135,18 @@
     line-height: 25px;
 }
 
+/*Notification banner styles*/
+#notification-banner {
+    background-color: #a9a9a9;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+}
+
+/*Notification message styles*/
+#notification-message {
+    margin: 0;
+}
 

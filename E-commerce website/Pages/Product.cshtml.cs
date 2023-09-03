@@ -12,6 +12,9 @@ namespace E_commerce_website.Pages
         private readonly UserManager<ApplicationUser> _userManager;
         [BindProperty]
         public Product Product { get; set; }
+        [BindProperty]
+        public bool IsAddProductSuccessful { get; set; }
+        public string InsertedProductName { get; set; }
         public ProductModel(ECommerceDBContext dbContext, UserManager<ApplicationUser> userManager) 
         {
             _context = dbContext;
@@ -41,6 +44,10 @@ namespace E_commerce_website.Pages
 
             _context.Add(userCart);
             await _context.SaveChangesAsync();
+
+            IsAddProductSuccessful = true;
+            InsertedProductName = userCart.Product.name;
+
             return Page();
         }
     }

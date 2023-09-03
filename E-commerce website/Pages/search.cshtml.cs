@@ -11,6 +11,7 @@ namespace E_commerce_website.Pages
         public List<Product> Products { get; set; }
         [BindProperty]
         public string searchKeyword { get; set; }
+
         public searchModel(ECommerceDBContext context) 
         {
             _context = context;

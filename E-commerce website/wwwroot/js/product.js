@@ -22,3 +22,8 @@ scentBtns.forEach((item, i) => { // looping through each button
         checkedBtn = i; // upading the variable
     })
 })
+
+if (isOperationSuccessful) {
+    var successBanner = document.getElementById('notification-banner');
+    successBanner.style.display = 'block';
+}

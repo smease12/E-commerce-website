@@ -6,6 +6,10 @@
     <link href="@Url.Content("~/css/product.css")" rel="stylesheet" type="text/css" />
 }
 
+<div id="notification-banner">
+    <p id="notification-message">"@Model.InsertedProductName" Added To Cart. <a style="color:white;" asp-page="/Cart">Go To Cart</a></p>
+</div>
+
 <section class="product-details">
     <div class="image-slider" style="background-image: url('@Url.Content("~/uploads/"+Model.Product.imgLocation1)');">
         <div class="product-images">
@@ -56,6 +60,19 @@
     <h2 class="heading">description</h2>
     <p class="des">@Model.Product.descriptionLong</p>
 </section>
+
+@if (Model.IsAddProductSuccessful)
+{
+    <script>
+        var isOperationSuccessful = true;
+    </script>
+}
+else
+{
+    <script>
+        var isOperationSuccessful = false;
+    </script>
+}
 
 @section Scripts
     {
