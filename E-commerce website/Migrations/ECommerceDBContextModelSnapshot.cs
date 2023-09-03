@@ -128,8 +128,8 @@ namespace E_commerce_website.Migrations
                     b.Property<string>("descriptionShort")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal?>("discount")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int?>("discount")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("fullPrice")
                         .HasColumnType("decimal(18,2)");
@@ -161,7 +161,7 @@ namespace E_commerce_website.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("E_commerce_website.Models.UserCart", b =>
@@ -193,7 +193,7 @@ namespace E_commerce_website.Migrations
 
                     b.HasIndex("Productid");
 
-                    b.ToTable("UserCarts", (string)null);
+                    b.ToTable("UserCarts");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

@@ -15,7 +15,7 @@ namespace E_commerce_website.Models
         public string? imgLocation3 { get; set;} 
         public string? imgLocation4 { get; set;}
         public decimal fullPrice { get; set; }
-        public decimal? discount { get; set; }
+        public int? discount { get; set; }
         public decimal? sellPrice { get; set; }
         public int stock { get; set; }
         public string? tags { get; set; }
