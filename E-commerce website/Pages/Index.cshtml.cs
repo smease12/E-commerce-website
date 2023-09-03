@@ -20,7 +20,7 @@ namespace E_commerce_website.Pages
 
         public void OnGet()
         {
-            List<int> idList = new List<int>{ 14, 15, 16, 17, 18, 19, 20, 21, 22 };
+            List<int> idList = new List<int>{ 14, 1022, 16, 17, 18, 19, 20, 21, 22 };
             FeaturedProducts = _dbContext.Products.Where(p => idList.Contains(p.id)).ToList();
         }
     }
