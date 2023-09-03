@@ -65,7 +65,8 @@
         <div class="product-price">
             <input type="number" id="actualprice" asp-for=Product.fullPrice placeholder="actual price">
             <input type="number" id="discount" asp-for=Product.discount placeholder="discount percentage">
-            <input type="number" id="sellprice" asp-for=Product.sellPrice placeholder="selling price">
+            <input type="number" min="0" step="0.01"
+                id="sellprice" asp-for=Product.sellPrice placeholder="selling price">
         </div>
 
         <input type="number" id="stock" asp-for=Product.stock min="20" placeholder="item in stocks (minimum 20)">

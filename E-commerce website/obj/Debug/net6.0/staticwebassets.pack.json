@@ -441,6 +441,10 @@
       "PackagePath": "staticwebassets\\uploads\\earrings grid.jpg"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\earrings.png",
+      "PackagePath": "staticwebassets\\uploads\\earrings.png"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\uploads\\furniture grid.jpg",
       "PackagePath": "staticwebassets\\uploads\\furniture grid.jpg"
     },
