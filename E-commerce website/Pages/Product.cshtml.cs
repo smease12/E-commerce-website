@@ -34,6 +34,8 @@ namespace E_commerce_website.Pages
         {
             ApplicationUser user = await _userManager.GetUserAsync(User);
             
+            
+
             UserCart userCart = new UserCart();
             userCart.DateAdded = DateTime.Now;
             userCart.Product = 
@@ -41,6 +43,12 @@ namespace E_commerce_website.Pages
             userCart.ApplicationUser = user;
             userCart.Quantity = 1;
             userCart.DateDelivery = (DateTime.Today).AddDays(3);
+
+            //check if this item is aleady in user cart
+            List<UserCart> existingCart = _context.UserCarts
+                .Where(u => u.ApplicationUser == user)
+                .Where(u => u.Product == userCart.Product)
+                .ToList();
 
             _context.Add(userCart);
             await _context.SaveChangesAsync();
