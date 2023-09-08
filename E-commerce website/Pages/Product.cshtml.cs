@@ -45,12 +45,19 @@ namespace E_commerce_website.Pages
             userCart.DateDelivery = (DateTime.Today).AddDays(3);
 
             //check if this item is aleady in user cart
-            List<UserCart> existingCart = _context.UserCarts
+            UserCart existingCart = _context.UserCarts
                 .Where(u => u.ApplicationUser == user)
                 .Where(u => u.Product == userCart.Product)
-                .ToList();
+                .FirstOrDefault();
 
-            _context.Add(userCart);
+            if(existingCart != null) 
+            {
+                existingCart.Quantity += 1;
+            }
+            else
+            {
+                _context.Add(userCart);
+            }          
             await _context.SaveChangesAsync();
 
             IsAddProductSuccessful = true;
