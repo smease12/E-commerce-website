@@ -53,7 +53,7 @@
                                     <img style="height:100px; width:100px" src="~/uploads/@Model.Products[i].ProductImg" />
                                 </div>
                                 <div class="col-4 m-3">
-                                    <p>@Model.Products[i].ProductName</p>
+                                    <p><a asp-page="/Product" asp-route-data-productId="@Model.Products[i].ProductId">@Model.Products[i].ProductName</a></p>
                                     <p>
                                         <input type="hidden" asp-for="@Model.Products[i].ProductQty" id="hiddenProductQuantity_@Model.Products[i].ProductId"/>
                                         <select asp-for="@Model.Products[i].ProductQty" name="@Model.Products[i].ProductQty" id="quantityDropdown_@Model.Products[i].ProductId" data-product-id="@Model.Products[i].ProductId" data-product-price="@Model.Products[i].ProductSellPrice">
