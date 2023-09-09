@@ -4,11 +4,6 @@
     Layout = null;
 }
 
-@section Styles {
-    @* <link href="@Url.Content("~/css/product.css")" rel="stylesheet" type="text/css" />*@
-    @*<link href="@Url.Content("~/lib/bootstrap/dist/css/bootstrap.min.css")" rel="stylesheet" type="text/css"/>*@
-}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +12,7 @@
     <title>@ViewData["Title"] Smease12 Gifts</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/form.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/cart.css" asp-append-version="true" />
 </head>
 
 <body>
@@ -99,11 +95,13 @@
                             <div class="row m-2">
                                 <p>Delivery: @Model.Products[i].DeliveryDate </p>
                                 <div class="col-3">
+                                <a asp-page="/Product" asp-route-productId=@Model.Products[i].ProductId>
                                     <img style="height:100px; width:120px;" src="~/uploads/@Model.Products[i].ProductImg" />
+                                </a>
                                 </div>
                                 <div class="col-6">
                                     <input type="hidden" asp-for="@Model.Products[i].ProductSellPrice" id="hiddenPrice_@Model.Products[i].ProductId" />
-                                    <p style="margin:30px 0 10px;">@Model.Products[i].ProductName</p>
+                                    <p style="margin:30px 0 10px;"><a asp-page="/Product" asp-route-productId="@Model.Products[i].ProductId">@Model.Products[i].ProductName</a></p>
                                     <p  id="priceDisplay_@Model.Products[i].ProductId"> $@Model.Products[i].OrderSellPrice</p>
                                     <select asp-for="@Model.Products[i].ProductQty" name="quantityDropdown_@Model.Products[i].ProductId" id="quantityDropdown_@Model.Products[i].ProductId" data-product-id="@Model.Products[i].ProductId" data-product-price="@Model.Products[i].ProductSellPrice">
                                         <option value="1">Qty: 1</option>
@@ -183,7 +181,7 @@
     
 </body>
 
-    <script src="~/js/product.js"></script>
+   @* <script src="~/js/product.js"></script>*@
     <script src="~/js/checkout.js"></script>
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
