@@ -50,8 +50,10 @@
                                     <input type="checkbox" class="checkbox" id="selected">
                                 </div>
                                 <div class="col-2 m-3" > 
+                                <a asp-page="/Product" asp-route-productId=@Model.Products[i].ProductId>
                                     <img style="height:100px; width:100px" src="~/uploads/@Model.Products[i].ProductImg" />
-                                </div>
+                                </a>
+                                    </div>
                                 <div class="col-4 m-3">
                                     <p><a asp-page="/Product" asp-route-productId="@Model.Products[i].ProductId">@Model.Products[i].ProductName</a></p>
                                     <p>
