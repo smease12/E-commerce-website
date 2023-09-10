@@ -27,6 +27,22 @@ namespace E_commerce_website.Pages
         public decimal Tax { get; set; }
         [BindProperty]
         public decimal OrderTotal { get; set; }
+        [BindProperty]
+        public string Country { get; set; }
+        [BindProperty]
+        public string FullName { get; set; }
+        [BindProperty]
+        public string PhoneNumber { get; set; }
+        [BindProperty]
+        public string Address1 { get; set; }
+        [BindProperty]
+        public string Address2 { get; set; }
+        [BindProperty]
+        public string City { get; set; }
+        [BindProperty]
+        public string State { get; set; }
+        [BindProperty]
+        public int ZipCode { get; set; }
 
         private readonly ECommerceDBContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
@@ -53,10 +69,23 @@ namespace E_commerce_website.Pages
                                   OrderSellPrice = decimal.Round((decimal)(p.sellPrice * u.Quantity), 2),
                                   ProductQty = u.Quantity,
                                   DeliveryDate = (u.DateDelivery).Value.ToString("dddd, dd MMMM yyyy"),
-                                  UserCartId = u.Id      
+                                  UserCartId = u.Id
                               }
-                    ) ;
+                    );
 
+                UserCart userCart = _context.UserCarts.FirstOrDefault(u => u.ApplicationUser == user);
+                if (userCart != null)
+                {
+                    Country = userCart.Country;
+                    FullName = userCart.FullName;
+                    PhoneNumber = userCart.PhoneNumber;
+                    Address1 = userCart.Address1;
+                    Address2 = userCart.Address2;
+                    City = userCart.City;
+                    State = userCart.State;
+                    ZipCode = (int)userCart.ZipCode; 
+                }
+            
                 Products = await result.ToListAsync();
                 ProductTypeCount = Products.Count();
                 ProductCount = (int)Products.Sum(s => s.ProductQty);
@@ -81,6 +110,12 @@ namespace E_commerce_website.Pages
         }
 
         public IActionResult OnPostCheckoutForm() 
+        {
+            int foo = 0;
+            return Page();
+        }
+
+        public IActionResult OnPostAddressForm()
         {
             int foo = 0;
             return Page();

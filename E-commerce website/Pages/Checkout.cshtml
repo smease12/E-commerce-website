@@ -25,6 +25,17 @@
         </script>
     }
     else{
+
+    <div id="popupAddressForm" class="popup">
+        <div class="popup-content">
+            <form method="post" asp-page-handler="AddressForm">
+                <label asp-for="Country">Country/Region</label>
+                <input type="text" id="Country" asp-for="Country"/>
+            </form>
+            <button id="closeAddressPopupButton">Close</button>
+        </div>
+    </div>
+
     <div style="width: 100%">
 
             <row class="border-bottom">
