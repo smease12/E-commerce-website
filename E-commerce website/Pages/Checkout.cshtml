@@ -31,6 +31,20 @@
             <form method="post" asp-page-handler="AddressForm">
                 <label asp-for="Country">Country/Region</label>
                 <input type="text" id="Country" asp-for="Country"/>
+                <label asp-for="FullName">Full name (First and Last name)</label>
+                <input type="text" id="FullName" asp-for="FullName"/>
+                <label asp-for="PhoneNumber">Phone number</label>
+                <input type="text" id="PhoneNumber" asp-for="PhoneNumber" />
+                <label asp-for="Address1">Address</label>
+                <input type="text" placeholder="Steet address or P.O. Box" id="Address1" asp-for="Address1" />
+                <input type="text" placeholder="Apt, suite, unit, building, floor, etc." id="Address2" asp-for="Address2" />
+                <label asp-for="City">City</label>
+                <input type="text" asp-for="City" id="City"/>
+                <label asp-for="State" id="State">State</label>
+                <input type="text" asp-for="State"/>
+                <label asp-for="ZipCode">ZIP Code</label>
+                <input type="number" asp-for="ZipCode" id="ZipCode" />
+                <button type="submit">Use this address</button>
             </form>
             <button id="closeAddressPopupButton">Close</button>
         </div>
