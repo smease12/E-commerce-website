@@ -13,7 +13,8 @@
 }
 
     .footer-content .logo {
-        height: 130px;
+       /*height: 130px*/ width: 60%; /*adjust this percentage based on the design*/
+       height: auto; /*let the height adjust proportionally*/
     }
 
 .footer-ul-container {
@@ -23,7 +24,7 @@
 }
 
 .category {
-   /*width: 200px*/ width: 100%;
+   /*width: 200px*/ width: 35%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
