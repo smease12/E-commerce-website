@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
 $(document).ready(function () {
     //Open the popup when the "open popup" button is clicked
     $("#openAddressPopupButton").click(function () {
+        event.preventDefault(); //prevent form submission
         $("#popupAddressForm").fadeIn();
     });
 

@@ -28,21 +28,21 @@ namespace E_commerce_website.Pages
         [BindProperty]
         public decimal OrderTotal { get; set; }
         [BindProperty]
-        public string Country { get; set; }
+        public string? Country { get; set; }
         [BindProperty]
-        public string FullName { get; set; }
+        public string? FullName { get; set; }
         [BindProperty]
-        public string PhoneNumber { get; set; }
+        public string? PhoneNumber { get; set; }
         [BindProperty]
-        public string Address1 { get; set; }
+        public string? Address1 { get; set; }
         [BindProperty]
-        public string Address2 { get; set; }
+        public string? Address2 { get; set; }
         [BindProperty]
-        public string City { get; set; }
+        public string? City { get; set; }
         [BindProperty]
-        public string State { get; set; }
+        public string? State { get; set; }
         [BindProperty]
-        public int ZipCode { get; set; }
+        public int? ZipCode { get; set; }
 
         private readonly ECommerceDBContext _context;
         private readonly UserManager<ApplicationUser> _userManager;
@@ -83,7 +83,7 @@ namespace E_commerce_website.Pages
                     Address2 = userCart.Address2;
                     City = userCart.City;
                     State = userCart.State;
-                    ZipCode = (int)userCart.ZipCode; 
+                    ZipCode = userCart.ZipCode; 
                 }
             
                 Products = await result.ToListAsync();

@@ -73,6 +73,10 @@
       "PackagePath": "staticwebassets\\css\\cart.css"
     },
     {
+      "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\css\\checkout.css",
+      "PackagePath": "staticwebassets\\css\\checkout.css"
+    },
+    {
       "Id": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\css\\footer.css",
       "PackagePath": "staticwebassets\\css\\footer.css"
     },

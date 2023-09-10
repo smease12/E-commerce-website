@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tRPBjPMWH1UUvhOSNK4HVFMt9GZuJYZWFVq6JE6BJCc=",
+  "Hash": "EgfhgFni7Z26qsWDM2CgUYlhfaY87hEm2OYqBxgXgTc=",
   "Source": "E-commerce website",
   "BasePath": "_content/E-commerce website",
   "Mode": "Default",
@@ -1341,6 +1341,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\cart.css"
+    },
+    {
+      "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\css\\checkout.css",
+      "SourceId": "E-commerce website",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\",
+      "BasePath": "_content/E-commerce website",
+      "RelativePath": "css/checkout.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\checkout.css"
     },
     {
       "Identity": "C:\\Users\\Serena\\source\\repos\\E-commerce-website\\E-commerce website\\wwwroot\\css\\footer.css",
