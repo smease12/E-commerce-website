@@ -80,6 +80,12 @@ namespace E_commerce_website.Pages
             return Page();
         }
 
+        public IActionResult OnPostCheckoutForm() 
+        {
+            int foo = 0;
+            return Page();
+        }
+
         public IActionResult OnPostDelete(int productId)
         {
             UserCart toDelete = _context.UserCarts.FirstOrDefault(u => u.Id == productId);
