@@ -134,3 +134,20 @@ document.addEventListener('DOMContentLoaded', function () {
     //Call the updatePrice function initially to display the initial prices
     updatePrice();
 });
+
+$(document).ready(function () {
+    //Open the popup when the "open popup" button is clicked
+    $("#openAddressPopupButton").click(function () {
+        $("#popupAddressForm").fadeIn();
+    });
+
+    //Close the popup button when the "Close" button or outside the popup is clicked
+    $("#closeAddressPopupButton, .popup").click(function () {
+        $("#popupAddressForm").fadeOut();
+    });
+
+    //Prevent the popup from closing when the form inside it is clicked
+    $("#popupAddressForm .popup-content").click(function (e) {
+        e.stopPropagation();
+    });
+});
