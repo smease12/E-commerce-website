@@ -21,6 +21,38 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /*Allow elements to wrap to the next line if needed*/
+}
+
+/*Style for the form*/
+form{
+    display:flex;
+    flex-direction:column; /*display form elements in a column*/
+    flex:1; /*expand to fill available space equally*/
+    max-height: 100%;
+}
+
+
+/*Style for the form container (flex container for rows)*/
+.form-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:10px; /*add spacing between rows*/
+}
+
+/*Style for each form input*/
+.form-input {
+    flex: 1; /*expand to fill available space equally*/
+    margin: 10px; /*add spacing between input fields*/
+    width: 100%; /*expand input fields to full width within the form*/
+}
+
+/*Style for form labels*/
+.form-label{
+    font-weight:bold;
+    display:block; /*Display labels as blocks for better spacing*/
 }
 
 /*Style for the button*/
