@@ -33,7 +33,7 @@ namespace E_commerce_website.Pages
             if (user != null)
             {
                 var result = (from p in _context.Products
-                            join u in _context.UserCarts on p.id equals u.Product.id
+                            join u in _context.Carts on p.id equals u.Product.id
                             where u.ApplicationUser == user
                             select new CartProductVM 
                             {
@@ -66,7 +66,7 @@ namespace E_commerce_website.Pages
             //update quantity in user cart
             foreach(var product in Products)
             {
-                UserCart userCart = _context.UserCarts.FirstOrDefault(c => c.Id == product.UserCartId);
+                Cart userCart = _context.Carts.FirstOrDefault(c => c.Id == product.UserCartId);
                 userCart.Quantity = product.ProductQty;
                 _context.SaveChanges();
             }
@@ -77,7 +77,7 @@ namespace E_commerce_website.Pages
 
         public IActionResult OnPostDelete(int productId) 
         {
-            UserCart toDelete = _context.UserCarts.FirstOrDefault(u => u.Id == productId);
+            Cart toDelete = _context.Carts.FirstOrDefault(u => u.Id == productId);
             if (toDelete != null)
             {
                 _context.Remove(toDelete);

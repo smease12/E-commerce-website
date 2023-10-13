@@ -13,7 +13,7 @@ namespace E_commerce_website
         }
 
         public virtual DbSet<Product> Products { get; set; }
-        public virtual DbSet<UserCart> UserCarts { get; set; }
+        public virtual DbSet<Cart> Carts { get; set; }
 
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace E_commerce_website.Models
 {
-    public class UserCart
+    public class Cart
     {
         public int Id { get; set; } 
         public DateTime? DateAdded { get; set; }

@@ -36,7 +36,7 @@ namespace E_commerce_website.Pages
             
             
 
-            UserCart userCart = new UserCart();
+            Cart userCart = new Cart();
             userCart.DateAdded = DateTime.Now;
             userCart.Product = 
                 await _context.Products.FirstOrDefaultAsync(p => p.id == Product.id);
@@ -45,7 +45,7 @@ namespace E_commerce_website.Pages
             userCart.DateDelivery = (DateTime.Today).AddDays(3);
 
             //check if this item is aleady in user cart
-            UserCart existingCart = _context.UserCarts
+            Cart existingCart = _context.Carts
                 .Where(u => u.ApplicationUser == user)
                 .Where(u => u.Product == userCart.Product)
                 .FirstOrDefault();
