@@ -29,12 +29,13 @@ namespace E_commerce_website.Pages
         public async Task<IActionResult> OnGetAsync()
         {
             ApplicationUser user = await  _userManager.GetUserAsync(User);
+            Cart cart = await _context.Carts.FirstAsync(c => c.ApplicationUser == user);
+            List<CartProduct> cartProducts = cart.CartProducts;
 
             if (user != null)
             {
                 var result = (from p in _context.Products
-                            join u in _context.Carts on p.id equals u.Product.id
-                            where u.ApplicationUser == user
+                            join u in cartProducts on p.id equals u.Product.id
                             select new CartProductVM 
                             {
                                 ProductId = p.id,
@@ -66,8 +67,8 @@ namespace E_commerce_website.Pages
             //update quantity in user cart
             foreach(var product in Products)
             {
-                Cart userCart = _context.Carts.FirstOrDefault(c => c.Id == product.UserCartId);
-                userCart.Quantity = product.ProductQty;
+                Cart cart = _context.Carts.FirstOrDefault(c => c.Id == product.UserCartId);
+           //     userCart.Quantity = product.ProductQty;
                 _context.SaveChanges();
             }
 
