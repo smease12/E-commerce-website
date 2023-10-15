@@ -124,12 +124,12 @@ namespace E_commerce_website.Pages
 
         public IActionResult OnPostDelete(int productId)
         {
-            Cart toDelete = _context.Carts.FirstOrDefault(u => u.Id == productId);
-            if (toDelete != null)
-            {
-                _context.Remove(toDelete);
-                _context.SaveChanges();
-            }
+            //Cart toDelete = _context.Carts.FirstOrDefault(u => u.Id == productId);
+            //if (toDelete != null)
+            //{
+            //    _context.Remove(toDelete);
+            //    _context.SaveChanges();
+            //}
 
             return new JsonResult(new { success = true });
         }

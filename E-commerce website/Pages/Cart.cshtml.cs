@@ -63,12 +63,15 @@ namespace E_commerce_website.Pages
             string returnUrl = Url.Content("~/Checkout");
             var postedValues = Products;
             Products = new List<CartProductVM>(postedValues);
+            ApplicationUser user = await _userManager.GetUserAsync(User);
+            Cart cart = await _context.Carts.FirstAsync(c => c.ApplicationUser == user);
 
             //update quantity in user cart
-            foreach(var product in Products)
+            foreach (var product in Products)
             {
-                Cart cart = _context.Carts.FirstOrDefault(c => c.Id == product.UserCartId);
-           //     userCart.Quantity = product.ProductQty;
+                CartProduct cartProduct = cart.CartProducts.FirstOrDefault
+                    (c => c.Id == product.UserCartId);
+                cartProduct.Quantity = product.ProductQty;
                 _context.SaveChanges();
             }
 
