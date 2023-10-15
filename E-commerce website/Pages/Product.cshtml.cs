@@ -33,35 +33,39 @@ namespace E_commerce_website.Pages
         public async Task<IActionResult> OnPostAsync() 
         {
             ApplicationUser user = await _userManager.GetUserAsync(User);
-            
-            
+            Product product = await _context.Products
+                    .FirstOrDefaultAsync(p => p.id == Product.id);
+            //check if this user already has a cart
+            Cart userCart = _context.Carts
+            .Where(u => u.ApplicationUser == user)
+            .FirstOrDefault();
 
-            Cart userCart = new Cart();
-            userCart.DateAdded = DateTime.Now;
-            userCart.Product = 
-                await _context.Products.FirstOrDefaultAsync(p => p.id == Product.id);
-            userCart.ApplicationUser = user;
-            userCart.Quantity = 1;
-            userCart.DateDelivery = (DateTime.Today).AddDays(3);
-
-            //check if this item is aleady in user cart
-            Cart existingCart = _context.Carts
-                .Where(u => u.ApplicationUser == user)
-                .Where(u => u.Product == userCart.Product)
-                .FirstOrDefault();
-
-            if(existingCart != null) 
+            if (userCart == null)
             {
-                existingCart.Quantity += 1;
+                Cart newCart = new Cart();
+                newCart.ApplicationUser = user;
+                CartProduct newCartProduct = new CartProduct();
+                newCartProduct.Quantity = 1;
+                newCartProduct.DateAdded = DateTime.Now;
+                newCartProduct.DateDelivery = (DateTime.Today).AddDays(3);
+                newCartProduct.Product = product;
+                newCart.CartProducts.Add(newCartProduct);
+                _context.Carts.Add(newCart);
             }
             else
             {
-                _context.Add(userCart);
-            }          
+                CartProduct userCartProduct = new CartProduct();
+                userCartProduct.DateAdded = DateTime.Now;
+                userCartProduct.Product = product;
+                userCartProduct.Quantity = 1;
+                userCartProduct.DateDelivery = (DateTime.Today).AddDays(3);
+                userCart.CartProducts.Add(userCartProduct);
+            }
+         
             await _context.SaveChangesAsync();
 
             IsAddProductSuccessful = true;
-            InsertedProductName = userCart.Product.name;
+            InsertedProductName = product.name;
 
             return Page();
         }
