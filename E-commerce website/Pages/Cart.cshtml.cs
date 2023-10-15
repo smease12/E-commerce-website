@@ -79,12 +79,18 @@ namespace E_commerce_website.Pages
 
         }
 
-        public IActionResult OnPostDelete(int productId) 
+        public async Task<IActionResult> OnPostDelete(int productId) 
         {
-            Cart toDelete = _context.Carts.FirstOrDefault(u => u.Id == productId);
-            if (toDelete != null)
+            ApplicationUser user = await _userManager.GetUserAsync(User);
+            Cart toDelete = _context.Carts.FirstOrDefault(u => u.ApplicationUser == user);
+
+            if (toDelete.CartProducts != null)
             {
-                _context.Remove(toDelete);
+                CartProduct toRemove = toDelete.CartProducts.Where(c => c.Id == productId).FirstOrDefault();
+                if (toRemove != null)
+                {
+                    toDelete.CartProducts.Remove(toRemove);
+                }
                 _context.SaveChanges();
             }
 
