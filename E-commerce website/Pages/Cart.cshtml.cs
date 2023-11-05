@@ -29,7 +29,9 @@ namespace E_commerce_website.Pages
         public async Task<IActionResult> OnGetAsync()
         {
             ApplicationUser user = await  _userManager.GetUserAsync(User);
-            Cart cart = await _context.Carts.FirstAsync(c => c.ApplicationUser == user);
+            List<Cart> test = _context.Carts.ToList();
+            Cart cart = await _context.Carts.Include(c => c.ApplicationUser)
+                .FirstOrDefaultAsync(c => c.ApplicationUser == user);
             List<CartProduct> cartProducts = cart.CartProducts;
 
             if (user != null)
@@ -84,14 +86,17 @@ namespace E_commerce_website.Pages
             ApplicationUser user = await _userManager.GetUserAsync(User);
             Cart toDelete = _context.Carts.FirstOrDefault(u => u.ApplicationUser == user);
 
-            if (toDelete.CartProducts != null)
+            if (toDelete != null)
             {
-                CartProduct toRemove = toDelete.CartProducts.Where(c => c.Id == productId).FirstOrDefault();
-                if (toRemove != null)
+                if (toDelete.CartProducts != null)
                 {
-                    toDelete.CartProducts.Remove(toRemove);
+                    CartProduct toRemove = toDelete.CartProducts.Where(c => c.Id == productId).FirstOrDefault();
+                    if (toRemove != null)
+                    {
+                        toDelete.CartProducts.Remove(toRemove);
+                    }
+                    _context.SaveChanges();
                 }
-                _context.SaveChanges();
             }
 
             return new JsonResult(new { success = true });

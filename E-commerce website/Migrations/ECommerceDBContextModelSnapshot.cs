@@ -137,23 +137,11 @@ namespace E_commerce_website.Migrations
                     b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("DateAdded")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DateDelivery")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("FullName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Productid")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("Quantity")
-                        .HasColumnType("int");
 
                     b.Property<string>("State")
                         .HasColumnType("nvarchar(max)");
@@ -165,9 +153,39 @@ namespace E_commerce_website.Migrations
 
                     b.HasIndex("ApplicationUserId");
 
+                    b.ToTable("Carts");
+                });
+
+            modelBuilder.Entity("E_commerce_website.Models.CartProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CartId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DateAdded")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DateDelivery")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Productid")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CartId");
+
                     b.HasIndex("Productid");
 
-                    b.ToTable("Carts");
+                    b.ToTable("CartProducts");
                 });
 
             modelBuilder.Entity("E_commerce_website.Models.Product", b =>
@@ -363,13 +381,24 @@ namespace E_commerce_website.Migrations
                         .WithMany()
                         .HasForeignKey("ApplicationUserId");
 
+                    b.Navigation("ApplicationUser");
+                });
+
+            modelBuilder.Entity("E_commerce_website.Models.CartProduct", b =>
+                {
+                    b.HasOne("E_commerce_website.Models.Cart", "Cart")
+                        .WithMany("CartProducts")
+                        .HasForeignKey("CartId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("E_commerce_website.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("Productid")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("ApplicationUser");
+                    b.Navigation("Cart");
 
                     b.Navigation("Product");
                 });
@@ -423,6 +452,11 @@ namespace E_commerce_website.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("E_commerce_website.Models.Cart", b =>
+                {
+                    b.Navigation("CartProducts");
                 });
 #pragma warning restore 612, 618
         }
