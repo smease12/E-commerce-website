@@ -30,13 +30,15 @@ namespace E_commerce_website.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly ECommerceDBContext _eCommerceDBContext;
 
         public RegisterModel(
             UserManager<ApplicationUser> userManager,
             IUserStore<ApplicationUser> userStore,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            ECommerceDBContext eCommerceDBContext)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -121,6 +123,12 @@ namespace E_commerce_website.Areas.Identity.Pages.Account
 
                 if (result.Succeeded)
                 {
+                    //create cart for user
+                    Cart newCart = new Cart();
+                    newCart.ApplicationUser = user;
+                    _eCommerceDBContext.Add(newCart);
+                    _eCommerceDBContext.SaveChangesAsync();
+
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);
@@ -150,6 +158,7 @@ namespace E_commerce_website.Areas.Identity.Pages.Account
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
+
 
             // If we got this far, something failed, redisplay form
             return Page();

@@ -29,31 +29,38 @@ namespace E_commerce_website.Pages
         public async Task<IActionResult> OnGetAsync()
         {
             ApplicationUser user = await  _userManager.GetUserAsync(User);
-            List<Cart> test = _context.Carts.ToList();
-            Cart cart = await _context.Carts.Include(c => c.ApplicationUser)
-                .FirstOrDefaultAsync(c => c.ApplicationUser == user);
-            List<CartProduct> cartProducts = cart.CartProducts;
 
             if (user != null)
             {
-                var result = (from p in _context.Products
-                            join u in cartProducts on p.id equals u.Product.id
-                            select new CartProductVM 
-                            {
-                                ProductId = p.id,
-                                UserCartId = u.Id,
-                                ProductName = p.name,
-                                ProductImg = p.imgLocation1,
-                                ProductSellPrice = p.sellPrice,
-                                OrderSellPrice = decimal.Round((decimal)(p.sellPrice * u.Quantity), 2),
-                                ProductQty = u.Quantity
-                            }
-                    );
+                Cart cart = await _context.Carts.Include(c => c.ApplicationUser)
+                            .FirstOrDefaultAsync(c => c.ApplicationUser == user);
+                if (cart != null)
+                {
+                    List<CartProduct> cartProducts = cart.CartProducts;
+                    var result = (from p in _context.Products
+                                  join u in cartProducts on p.id equals u.Product.id
+                                  select new CartProductVM
+                                  {
+                                      ProductId = p.id,
+                                      UserCartId = u.Id,
+                                      ProductName = p.name,
+                                      ProductImg = p.imgLocation1,
+                                      ProductSellPrice = p.sellPrice,
+                                      OrderSellPrice = decimal.Round((decimal)(p.sellPrice * u.Quantity), 2),
+                                      ProductQty = u.Quantity
+                                  }
+                        );
 
-                Products = await result.ToListAsync();
-                ProductTypeCount = Products.Count();
-                ProductCount = (int)Products.Sum(s => s.ProductQty);
-                TotalPrice = Math.Round((decimal)(Products.Sum(s=> s.OrderSellPrice)), 2);
+                    Products = await result.ToListAsync();
+                    ProductTypeCount = Products.Count();
+                    ProductCount = (int)Products.Sum(s => s.ProductQty);
+                    TotalPrice = Math.Round((decimal)(Products.Sum(s => s.OrderSellPrice)), 2);
+                }
+                else 
+                {
+                    Cart newCart = new Cart();
+                    newCart.ApplicationUser = user;
+                }
             }
             
             
