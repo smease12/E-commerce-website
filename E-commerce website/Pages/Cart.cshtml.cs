@@ -60,6 +60,13 @@ namespace E_commerce_website.Pages
                 {
                     Cart newCart = new Cart();
                     newCart.ApplicationUser = user;
+;                    _context.Carts.Add(newCart);
+                    _context.SaveChangesAsync();
+
+                    Products = new List<CartProductVM>();
+                    ProductTypeCount = 0;
+                    ProductCount = 0;
+                    TotalPrice = 0;
                 }
             }
             

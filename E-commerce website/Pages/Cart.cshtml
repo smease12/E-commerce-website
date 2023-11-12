@@ -12,7 +12,7 @@
     <section class="product-details">
         <div class="details" style="width: 100%">
             <h2 class="product-brand">Shopping Cart</h2>
-           @* <a href="#">Deselect all items</a>*@
+            @* <a href="#">Deselect all items</a>*@
             @if (Model.ProductCount > 0)
             {
                 <p class="product-sub-heading">Products</p>
@@ -22,7 +22,7 @@
                 <p class="product-sub-heading">Shopping cart is currently empty.</p>
                 <a href="/Login">Login here</a>
             }
-            else 
+            else
             {
                 <p class="product-sub-heading">Shopping cart is currently empty.</p>
             }
@@ -36,60 +36,70 @@
                     <input type="hidden" asp-for="ProductCount" id="hiddenProductCount" />
                     <input type="hidden" asp-for="TotalPrice" id="hiddenTotalPrice"/>
                     <div class="col-9" >
-                        @for (int i = 0; i < Model.Products.Count; i++)
+                        @if ( Model.Products!=null)
                         {
-                            <input type="hidden" asp-for="@Model.Products[i].ProductId" />
-                            <input type="hidden" asp-for="@Model.Products[i].ProductName" />
-                            <input type="hidden" asp-for="@Model.Products[i].ProductImg" />
-                            <input type="hidden" asp-for="@Model.Products[i].ProductSellPrice" id="hiddenPrice_@Model.Products[i].ProductId" />
-                            <input type="hidden" asp-for="@Model.Products[i].ProductQty" id="hiddenQty_@Model.Products[i].ProductId" />
-                            <input type="hidden" asp-for="@Model.Products[i].UserCartId" />
-                            <input type="hidden" asp-for="@Model.Products[i].OrderSellPrice" />
-                            <div class="row border border-dark align-items-center">
-                                <div class="col-1 m-3">
-                                    <input type="checkbox" class="checkbox" id="selected">
-                                </div>
-                                <div class="col-2 m-3" > 
-                                <a asp-page="/Product" asp-route-productId=@Model.Products[i].ProductId>
-                                    <img style="height:100px; width:100px" src="~/uploads/@Model.Products[i].ProductImg" />
-                                </a>
+                            @for (int i = 0; i < Model.Products.Count; i++)
+                            {
+                                < input type = "hidden" asp -for= "@Model.Products[i].ProductId" />
+                                < input type = "hidden" asp -for= "@Model.Products[i].ProductName" />
+                                < input type = "hidden" asp -for= "@Model.Products[i].ProductImg" />
+                                < input type = "hidden" asp -for= "@Model.Products[i].ProductSellPrice" id = "hiddenPrice_@Model.Products[i].ProductId" />
+                                < input type = "hidden" asp -for= "@Model.Products[i].ProductQty" id = "hiddenQty_@Model.Products[i].ProductId" />
+                                < input type = "hidden" asp -for= "@Model.Products[i].UserCartId" />
+                                < input type = "hidden" asp -for= "@Model.Products[i].OrderSellPrice" />
+                                <div class="row border border-dark align-items-center">
+                                    <div class="col-1 m-3">
+                                        <input type = "checkbox" class="checkbox" id="selected">
                                     </div>
-                                <div class="col-4 m-3">
-                                    <p><a asp-page="/Product" asp-route-productId="@Model.Products[i].ProductId">@Model.Products[i].ProductName</a></p>
-                                    <p>
-                                        <input type="hidden" asp-for="@Model.Products[i].ProductQty" id="hiddenProductQuantity_@Model.Products[i].ProductId"/>
-                                        <select asp-for="@Model.Products[i].ProductQty" name="@Model.Products[i].ProductQty" id="quantityDropdown_@Model.Products[i].ProductId" data-product-id="@Model.Products[i].ProductId" data-product-price="@Model.Products[i].ProductSellPrice">
-                                            <option value="1">Qty: 1</option>
-                                            <option value="2">Qty: 2</option>
-                                            <option value="3">Qty: 3</option>
-                                            <option value="4">Qty: 4</option>
-                                            <option value="5">Qty: 5</option>
-                                            <option value="6">Qty: 6</option>
-                                            <option value="7">Qty: 7</option>
-                                            <option value="8">Qty: 8</option>
-                                            <option value="9">Qty: 9</option>
-                                            <option value="10">Qty: 10</option>
-                                        </select>
-                                        |
-                                        <button data-product-id="@Model.Products[i].UserCartId"
-                                        class="delete-button"
-                                        style="background: none;
-                                                    border: none;
-                                                    padding: 0;
-                                                    margin: 0;
-                                                    cursor: pointer;
-                                                    color: black; 
-                                                    text-decoration: underline;" >
-                                            Delete
-                                        </button>
-                                    </p>
-                                </div>
-                                <p class="col-3 m-3" id="priceDisplay_@Model.Products[i].ProductId">$@Model.Products[i].OrderSellPrice</p>
-                            </div>
-                        }
+                                    <div class="col-2 m-3" > 
+                                        <a asp-page="/Product" asp-route-productId=@Model.Products[i].ProductId>
+                                            <img style = "height:100px; width:100px" src="~/uploads/@Model.Products[i].ProductImg" />
+                                        </a>
+                                    </div>
+                                    <div class="col-4 m-3">
+                                        <p><a asp-page="/Product" asp-route-productId="@Model.Products[i].ProductId">@Model.Products[i].ProductName</a></p>
+                                        <p>
+                                            <input type = "hidden" asp-for="@Model.Products[i].ProductQty" id="hiddenProductQuantity_@Model.Products[i].ProductId"/>
+                                            <select asp-for="@Model.Products[i].ProductQty" name="@Model.Products[i].ProductQty" id="quantityDropdown_@Model.Products[i].ProductId" data-product-id="@Model.Products[i].ProductId" data-product-price="@Model.Products[i].ProductSellPrice">
+                                                <option value = "1" > Qty: 1</option>
+                                                <option value = "2" > Qty: 2</option>
+                                                <option value = "3" > Qty: 3</option>
+                                                <option value = "4" > Qty: 4</option>
+                                                <option value = "5" > Qty: 5</option>
+                                                <option value = "6" > Qty: 6</option>
+                                                <option value = "7" > Qty: 7</option>
+                                                <option value = "8" > Qty: 8</option>
+                                                <option value = "9" > Qty: 9</option>
+                                                <option value = "10" > Qty: 10</option>
+                                            </select>
+                                            |
+                                            <button data-product-id="@Model.Products[i].UserCartId"
+                                            class="delete-button"
+                                            style="background: none;
+                                                            border: none;
+                                                            padding: 0;
+                                                            margin: 0;
+                                                            cursor: pointer;
+                                                            color: black; 
+                                                            text-decoration: underline;" >
+                                                Delete
+                                            </button>
+                                        </p>
+                                    </div>
+                                    <p class="col-3 m-3" id="priceDisplay_@Model.Products[i].ProductId">$@Model.Products[i].OrderSellPrice</p>
+                                    </div>
 
+
+                                
+                            }
+
+                        }
+                        else
+                        {
+                            <label>No products in cart!</label>
+                        }
                     </div>
-                    <div class="col-3">
+                        <div class="col-3">
 
                         <p id="displaySubtotal">Subtotal (@Model.ProductCount item(s)): $@Model.TotalPrice</p>
                         @if (Model.ProductCount > 0)
@@ -112,8 +122,8 @@
                     </div>
             
         </form>
-        }
         
+        }
     </div>
 </section>
 
